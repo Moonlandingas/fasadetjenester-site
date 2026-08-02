@@ -20,6 +20,23 @@ section{padding:104px 0}.dk{background:var(--ink);color:#E4E9EF}.dk .ey{color:va
 .bl{border-color:currentColor;background:transparent}.bl:hover{background:currentColor}.dk .bl:hover{color:var(--ink)}
 .bg1{border-color:rgba(255,255,255,.45);color:#fff}.bg1:hover{background:#fff;color:var(--ink);border-color:#fff}
 .la{font-weight:600;font-size:14.5px;text-decoration:none;border-bottom:2px solid var(--hiviz);padding-bottom:2px}
+.ni{position:relative}
+.ni>a{text-decoration:none;opacity:.87}.ni>a:hover{opacity:1;color:var(--hiviz)}
+.sub{position:absolute;top:100%;left:-18px;padding-top:16px;display:none;z-index:70}
+.ni:hover .sub,.ni:focus-within .sub{display:block}
+.subin{background:rgba(14,24,38,.97);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.13);border-radius:14px;padding:10px;min-width:290px;box-shadow:0 18px 44px rgba(0,0,0,.4)}
+.sub a{display:block;padding:11px 14px;border-radius:9px;font-size:14.5px;color:#fff;text-decoration:none;opacity:.9;white-space:nowrap}
+.sub a:hover{background:rgba(255,255,255,.08);opacity:1;color:var(--hiviz)}
+.sub .all{border-top:1px solid rgba(255,255,255,.13);margin-top:6px;color:var(--hiviz)}
+.hb{display:none;background:none;border:1px solid rgba(255,255,255,.45);border-radius:100px;color:inherit;padding:9px 18px;font:600 14px var(--b);cursor:pointer}
+header.st .hb{border-color:var(--ink)}
+header.open{background:var(--ink)!important;color:#fff!important}
+.mm{position:fixed;inset:70px 0 0 0;background:var(--ink);color:#fff;z-index:59;overflow:auto;padding:10px 26px 40px;display:none}
+.mm.open{display:block}
+.mm h5{font:600 11.5px/1 var(--b);letter-spacing:.19em;text-transform:uppercase;color:var(--hiviz);margin:26px 0 8px}
+.mm a{display:block;padding:13px 0;font:600 19px var(--d);color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.1)}
+.mm a:active{color:var(--hiviz)}
+body.lock{overflow:hidden}
 header{position:sticky;top:0;z-index:60;color:#fff;transition:.25s}
 .hd{display:flex;align-items:center;gap:24px;height:70px}
 .lg{font-family:var(--d);font-weight:700;font-size:19px;letter-spacing:-.03em;text-decoration:none;white-space:nowrap}
@@ -148,7 +165,7 @@ footer{background:var(--ink);color:#98A2B0;padding:64px 0 40px;font-size:14.5px}
 .pn{background:var(--navy);color:#DCE7F5;padding:11px 0;font-size:13.5px;position:relative;z-index:70}
 .tbd{border-bottom:1.5px dotted var(--hiviz)}
 .rv{opacity:0;transform:translateY(20px)}.rv.in{opacity:1;transform:none;transition:.7s}
-@media(max-width:960px){section{padding:74px 0}.nv{display:none}
+@media(max-width:960px){section{padding:74px 0}.nv{display:none}.hb{display:inline-flex;margin-left:auto}.tel{display:none}
 .wg,.pg,.om,.omr,.fg{grid-template-columns:1fr;gap:40px}
 .cat{grid-template-columns:1fr;gap:22px}.cm img{aspect-ratio:16/9}
 .bar{grid-template-columns:1fr;gap:34px}.stp{grid-template-columns:1fr}
@@ -161,9 +178,44 @@ footer{background:var(--ink);color:#98A2B0;padding:64px 0 40px;font-size:14.5px}
 
 <header id="hdr"><div class="wrap hd">
 <a class="lg" href="#">Fasade<em>tjenester</em></a>
-<nav class="nv"><a href="#arshjul">Årshjulet</a><a href="#tjenester">Tjenester</a><a href="#resultater">Før og etter</a><a href="#prosess">Slik jobber vi</a><a href="#om">Om oss</a><a href="#verdt-a-vite">Verdt å vite</a></nav>
+<nav class="nv">
+<div class="ni"><a href="#tjenester">Tjenester <span aria-hidden="true">&#9662;</span></a>
+<div class="sub"><div class="subin">
+<a href="#tjenester">Fasadevask og utvendig rengjøring</a>
+<a href="#tjenester">Håndverk — mur, tak, beslag</a>
+<a href="#tjenester">Vinter og sikring</a>
+<a href="#tjenester">Løpende renhold</a>
+<a class="all" href="#tjenester">Se alle tjenester &rarr;</a>
+</div></div></div>
+<a href="#arshjul">Årshjulet</a>
+<a href="#resultater">Før og etter</a>
+<div class="ni"><a href="#verdt-a-vite">Verdt å vite <span aria-hidden="true">&#9662;</span></a>
+<div class="sub"><div class="subin">
+<a href="fasadevask.html">Fasadevask: pris, metode og intervall</a>
+<a class="all" href="#verdt-a-vite">Alle artikler &rarr;</a>
+</div></div></div>
+<a href="#om">Om oss</a>
+<a href="#omrader">Områder</a>
+</nav>
+<button class="hb" id="hbBtn" aria-expanded="false" aria-controls="mm">Meny</button>
 <a class="tel" href="tel:+4792979177">929 79 177</a>
 <a class="btn bs1" href="https://fasadetjenester.no/kontakt-oss/">Gratis befaring</a></div></header>
+<div class="mm" id="mm">
+<h5>Tjenester</h5>
+<a href="#tjenester">Fasadevask og utvendig rengjøring</a>
+<a href="#tjenester">Håndverk — mur, tak, beslag</a>
+<a href="#tjenester">Vinter og sikring</a>
+<a href="#tjenester">Løpende renhold</a>
+<h5>Selskapet</h5>
+<a href="#arshjul">Årshjulet</a>
+<a href="#resultater">Før og etter</a>
+<a href="#verdt-a-vite">Verdt å vite</a>
+<a href="#om">Om oss</a>
+<a href="#omrader">Områder</a>
+<h5>Kontakt</h5>
+<a href="tel:+4792979177">929 79 177</a>
+<a href="https://fasadetjenester.no/kontakt-oss/" style="color:var(--hiviz)">Bestill gratis befaring &rarr;</a>
+</div>
 
 <div class="hero"><div class="hbg">
 <video autoplay muted loop playsinline preload="metadata" poster="img/hero.webp" id="heroVideo">
@@ -352,5 +404,12 @@ window.addEventListener('scroll',os,{passive:true});os();
 var rv=[].slice.call(document.querySelectorAll('.rv'));
 if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{rootMargin:'0px 0px -8% 0px',threshold:.06});
 rv.forEach(function(n){io.observe(n);});}else rv.forEach(function(n){n.classList.add('in');});
+var hbB=document.getElementById('hbBtn'),mmE=document.getElementById('mm');
+if(hbB){hbB.addEventListener('click',function(){var o=mmE.classList.toggle('open');
+hbB.setAttribute('aria-expanded',o);document.body.classList.toggle('lock',o);
+hdr.classList.toggle('open',o);hbB.textContent=o?'Lukk':'Meny';});
+[].forEach.call(mmE.querySelectorAll('a'),function(a){a.addEventListener('click',function(){
+mmE.classList.remove('open');document.body.classList.remove('lock');hdr.classList.remove('open');
+hbB.setAttribute('aria-expanded','false');hbB.textContent='Meny';});});}
 })();
 </script></body></html>

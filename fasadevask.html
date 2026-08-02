@@ -42,6 +42,9 @@ header{background:var(--ink);color:#fff;padding:18px 0}
 .hd{display:flex;justify-content:space-between;align-items:center;max-width:1160px;margin:0 auto;padding:0 24px}
 .lg{font-family:var(--d);font-weight:700;font-size:19px;text-decoration:none;color:#fff}.lg em{font-style:normal;color:var(--hiviz)}
 .btn{display:inline-flex;align-items:center;gap:.5em;font-weight:600;font-size:15px;padding:13px 26px;border-radius:100px;text-decoration:none;background:var(--hiviz);color:#161D06}
+.anv{display:flex;gap:20px;margin-left:auto;margin-right:22px;font-size:14.5px;font-weight:500}
+.anv a{color:#fff;text-decoration:none;opacity:.85}.anv a:hover{color:var(--hiviz);opacity:1}
+@media(max-width:760px){.anv{display:none}}
 .crumb{font-size:13.5px;color:var(--steind);margin-top:34px}.crumb a{color:inherit}
 .ey{font-size:11.5px;font-weight:600;letter-spacing:.19em;text-transform:uppercase;color:var(--navy)}
 .lede{font-size:20px;color:var(--steind)}
@@ -70,7 +73,7 @@ footer{background:var(--ink);color:#98A2B0;padding:34px 0;margin-top:70px;font-s
 </style></head><body>
 
 <header><div class="hd"><a class="lg" href="index.html">Fasade<em>tjenester</em></a>
-<a class="btn" href="https://fasadetjenester.no/kontakt-oss/">Gratis befaring</a></div></header>
+<nav class="anv"><a href="index.html">Forside</a><a href="index.html#tjenester">Tjenester</a><a href="index.html#verdt-a-vite">Verdt å vite</a><a href="index.html#om">Om oss</a></nav><a class="btn" href="https://fasadetjenester.no/kontakt-oss/">Gratis befaring</a></div></header>
 
 <div class="wrap">
 <p class="crumb"><a href="index.html">Forside</a> / <a href="index.html#verdt-a-vite">Verdt å vite</a> / Fasadevask</p>
