@@ -170,9 +170,6 @@ footer{background:var(--ink);color:#98A2B0;padding:64px 0 40px;font-size:14.5px}
 .fb{margin-top:48px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:13px}
 .pn{background:var(--navy);color:#DCE7F5;padding:11px 0;font-size:13.5px;position:relative;z-index:70}
 .tbd{border-bottom:1.5px dotted var(--hiviz)}
-#tf-befaring{width:100%;height:660px;border-radius:20px;overflow:hidden;background:#fff;border:1px solid var(--puss2)}
-#tf-befaring>div,#tf-befaring .tf-v1-widget,#tf-befaring iframe{width:100%!important;height:100%!important;border:0!important;display:block}
-@media(max-width:640px){#tf-befaring{height:580px;border-radius:0;margin:0 -26px;width:calc(100% + 52px);border-left:0;border-right:0}}
 .rv{opacity:0;transform:translateY(20px)}.rv.in{opacity:1;transform:none;transition:.7s}
 @media(max-width:960px){section{padding:74px 0}.nv{display:none}.hb{display:inline-flex;margin-left:auto}.tel{display:none}.hd .btn{padding:9px 16px;font-size:13.5px}.hd{gap:12px}.cl1{display:none}.cs1{display:inline}
 .wg,.pg,.om,.omr,.fg{grid-template-columns:1fr;gap:40px}
@@ -270,7 +267,7 @@ footer{background:var(--ink);color:#98A2B0;padding:64px 0 40px;font-size:14.5px}
 <div class="tr"><span>Leverandører ellers</span><b id="tL">0</b></div>
 <div class="tr ac"><span>Befaringer hos oss</span><b id="tB">0</b></div>
 <p class="tn" id="tN">Velg tjenestene ved siden av, så ser du forskjellen.</p>
-<a class="btn bs1" href="#befaring">Ta med i befaringen</a></div></div></div></section>
+<a class="btn bs1" href="#befaring" id="pickGo">Ta med i befaringen</a></div></div></div></section>
 
 <section class="pa" id="tjenester"><div class="wrap">
 <div class="nar rv"><p class="ey">Tjenester</p><h2 class="h2">Fire områder. Én leverandør.</h2>
@@ -326,15 +323,30 @@ footer{background:var(--ink);color:#98A2B0;padding:64px 0 40px;font-size:14.5px}
 <div class="nar rv"><p class="ey">Gratis befaring</p><h2 class="h2">Fortell hvor bygget står, så tar vi resten.</h2>
 <p style="font-size:18.5px;color:var(--steind);margin-top:18px">Du trenger ikke vite hva tjenesten heter. Beskriv problemet, så finner vi ut av det på befaringen — og ser samtidig etter alt annet som bør tas mens vi er der. Representerer du et borettslag eller sameie, kan én befaring dekke hele styrets vedlikeholdsliste.</p></div>
 <div class="nar" style="margin-top:34px">
-<div id="tf-befaring"></div>
+<a class="btn bs1" id="tfOpen" href="https://416jbe00upv.typeform.com/to/vKqv5RX5" style="font-size:17px;padding:18px 34px">Bestill gratis befaring</a>
+<p style="margin-top:16px;font-size:14px;color:var(--steind)">Åpnes som kort skjema — under to minutter. Uforpliktende, og du velger selv hva som eventuelt gjøres.</p>
 </div></div></section>
+<link rel="stylesheet" href="https://embed.typeform.com/next/css/popup.css">
 <script src="https://embed.typeform.com/next/embed.js"></script>
 <script>
-(function(){function mount(){if(!window.tf){setTimeout(mount,120);return;}
-tf.createWidget('vKqv5RX5',{container:document.getElementById('tf-befaring'),inlineOnMobile:true,hideHeaders:true,opacity:100,
-onSubmit:function(){setTimeout(function(){location.href='tusen-takk.html'},1100)}});
-setTimeout(function(){window.dispatchEvent(new Event('resize'));},400);}
-if(document.readyState!=='loading')mount();else document.addEventListener('DOMContentLoaded',mount);})();
+(function(){var TF='vKqv5RX5';
+function done(){setTimeout(function(){location.href='tusen-takk.html'},900);}
+function ready(fn){if(document.readyState!=='loading')fn();else document.addEventListener('DOMContentLoaded',fn);}
+ready(function(){
+  var btn=document.getElementById('tfOpen');
+  if(btn&&window.tf){var p=tf.createPopup(TF,{onSubmit:done});
+    btn.addEventListener('click',function(e){e.preventDefault();p.open();});}
+  // Velgeren: send valgene inn i skjemaets tjeneste-felt via prefill-URL
+  var MAP={'Takreparasjon':'Tak- eller takrennereparasjon','Snørydding':'Snørydding / istappfjerning','Istappfjerning':'Snørydding / istappfjerning'};
+  var go=document.getElementById('pickGo');
+  if(go){go.addEventListener('click',function(e){
+    var v=[].slice.call(document.querySelectorAll('.pk input:checked')).map(function(b){return MAP[b.value]||b.value;});
+    v=v.filter(function(x,i){return v.indexOf(x)===i;});
+    if(v.length){e.preventDefault();
+      location.href='https://416jbe00upv.typeform.com/to/vKqv5RX5#tjenester='+encodeURIComponent(v.join(','));}
+    // ingen valg: la ankeret scrolle til befaring-knappen som normalt
+  });}
+});})();
 </script>
 
 <section class="kb"><div class="wrap kbw">
@@ -391,7 +403,7 @@ tS=document.getElementById('tS'),tL=document.getElementById('tL'),tB=document.ge
 tN=document.getElementById('tN'),pe=document.getElementById('pe'),pel=document.getElementById('pel');
 function ta(){var s=bx.filter(function(b){return b.checked;}),n=s.length;
 tS.textContent=n;tL.textContent=n;tB.textContent=n?1:0;
-tN.textContent=n===0?'Velg tjenestene ved siden av, så ser du forskjellen.':(n===1?'Én tjeneste — og vi ser samtidig etter alt annet som bør tas mens vi er der.':n+' tjenester som ellers ville krevd '+n+' leverandører, '+n+' befaringer og '+n+' fakturaer. Hos oss: én av hver.');
+tN.textContent=n===0?'Velg tjenestene ved siden av, så ser du forskjellen.':(n===1?'Én tjeneste — og vi ser samtidig etter alt annet som bør tas mens vi er der.':n+' tjenester som ellers ville krevd '+n+' leverandører og '+n+' fakturaer. Hos oss: én befaring — og valgene dine følger med inn i skjemaet.');
 if(pe){pe.hidden=n===0;pel.innerHTML=s.map(function(b){return '<span style="display:inline-block;padding:8px 14px;background:var(--ink);color:#fff;border-radius:100px;font-size:14px">'+b.value+'</span>';}).join('');}}
 bx.forEach(function(b){b.addEventListener('change',ta);});ta();
 var fg=document.querySelector('#befaring .fg');
