@@ -18,5 +18,6 @@ selv genererer (wp-emoji, tema-CSS/JS, oEmbed, generator) — det lages på nytt
 - [ ] Typeform/andre embeds på undersider
 
 ## Ved lansering
+- [ ] FJERN noindex-metaen fra alle sider (merket med kommentar i HTML)
 - [ ] GTM: konverteringstrigger på sidevisning /tusen-takk
 - [ ] Redirects fra gamle URL-er (egen jobb, jf. strateginotatet)
