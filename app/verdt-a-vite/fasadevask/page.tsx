@@ -1,8 +1,9 @@
 import Script from 'next/script'
+import { LIVE } from '../../../lib/site'
 export const metadata = {
   title: "Fasadevask: pris, metode og hvor ofte | Fasadetjenester AS",
   description: "Hva koster fasadevask? N\u00e5r b\u00f8r du velge softwash fremfor h\u00f8ytrykk, og hvor ofte b\u00f8r fasaden vaskes? Guide for borettslag, sameier og byggeiere i Oslo og omegn.",
-  robots: { index: false, follow: false }, // fjernes via LIVE-bryteren ved lansering
+  robots: { index: LIVE, follow: LIVE },
   alternates: { canonical: '/verdt-a-vite/fasadevask' },
   openGraph: {
     title: "Fasadevask: pris, metode og hvor ofte | Fasadetjenester AS",
