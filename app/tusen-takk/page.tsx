@@ -1,13 +1,14 @@
-<!doctype html><html lang="nb"><head><meta charset="utf-8">
-<!-- Google Tag Manager (fra fasadetjenester.no) -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KP9PTS6D');</script>
-<!-- End Google Tag Manager -->
-<meta name="robots" content="noindex, nofollow">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Tusen takk! | Fasadetjenester AS</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
+import Script from 'next/script'
+export const metadata = {
+  title: "Tusen takk! | Fasadetjenester AS",
+  description: "",
+  robots: { index: false, follow: false }
+}
+export default function Page() {
+  return (<>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com"  crossOrigin="anonymous"/>
+    <style dangerouslySetInnerHTML={{__html: `
 :root{--ink:#0E1826;--navy:#1E3A63;--hiviz:#D8EC3C;--puss:#ECEDE9;--puss2:#DEE0DB;--steind:#59606B;
 --d:"Bricolage Grotesque",system-ui,sans-serif;--b:"Inter Tight",system-ui,sans-serif}
 *{box-sizing:border-box}
@@ -25,8 +26,8 @@ h1{font-family:var(--d);font-weight:600;font-size:clamp(38px,6vw,64px);letter-sp
 .btn{display:inline-flex;align-items:center;white-space:nowrap;gap:.5em;font-weight:600;font-size:15px;padding:14px 26px;border-radius:100px;text-decoration:none;background:var(--hiviz);color:#161D06}
 .btn2{background:transparent;border:1px solid rgba(255,255,255,.45);color:#fff;margin-left:10px}
 footer{padding:26px 0;font-size:13.5px;color:rgba(255,255,255,.5);text-align:center}
-</style></head><body>
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KP9PTS6D" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+`}}/>
+    <div dangerouslySetInnerHTML={{__html: `
 <header><div class="wrap"><a class="lg" href="/">Fasade<em>tjenester</em></a></div></header>
 <main><div class="wrap">
 <p class="ey">Henvendelse mottatt</p>
@@ -39,5 +40,6 @@ footer{padding:26px 0;font-size:13.5px;color:rgba(255,255,255,.5);text-align:cen
 </ul>
 <div><a class="btn" href="/">Tilbake til forsiden</a><a class="btn btn2" href="tel:+4792979177">929 79 177</a></div>
 </div></main>
-<footer><div class="wrap">© 2026 Fasadetjenester AS · <a href="https://moonlandingsite.no" style="color:inherit">Nettside av Moonlanding</a></div></footer>
-</body></html>
+<footer><div class="wrap">© 2026 Fasadetjenester AS · <a href="https://moonlandingsite.no" style="color:inherit">Nettside av Moonlanding</a></div></footer>`}}/>
+  </>)
+}

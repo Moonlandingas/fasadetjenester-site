@@ -1,15 +1,14 @@
-<!doctype html><html lang="nb"><head><meta charset="utf-8">
-<!-- Google Tag Manager (fra fasadetjenester.no) -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KP9PTS6D');</script>
-<!-- End Google Tag Manager -->
-
-<meta name="robots" content="noindex, nofollow">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Verdt å vite — råd og artikler | Fasadetjenester AS</title>
-<meta name="description" content="Korte, ærlige artikler om fasadevask, tak, vintersikring og bygningsvedlikehold — skrevet av folk som gjør jobben selv.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
+import Script from 'next/script'
+export const metadata = {
+  title: "Verdt \u00e5 vite \u2014 r\u00e5d og artikler | Fasadetjenester AS",
+  description: "Korte, \u00e6rlige artikler om fasadevask, tak, vintersikring og bygningsvedlikehold \u2014 skrevet av folk som gj\u00f8r jobben selv.",
+  robots: { index: false, follow: false }
+}
+export default function Page() {
+  return (<>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com"  crossOrigin="anonymous"/>
+    <style dangerouslySetInnerHTML={{__html: `
 :root{--ink:#0E1826;--navy:#1E3A63;--hiviz:#D8EC3C;--puss:#ECEDE9;--puss2:#DEE0DB;--paper:#fff;--steind:#59606B;
 --d:"Bricolage Grotesque",system-ui,sans-serif;--b:"Inter Tight",system-ui,sans-serif}
 *{box-sizing:border-box}
@@ -46,8 +45,8 @@ a.card:hover{border-color:var(--navy);transform:translateY(-3px)}
 footer{background:var(--ink);color:#98A2B0;padding:30px 0;font-size:14px;text-align:center}
 main{padding-top:64px}
 @media(max-width:900px){.grid{grid-template-columns:1fr}.anv{display:none}}
-</style></head><body>
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KP9PTS6D" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+`}}/>
+    <div dangerouslySetInnerHTML={{__html: `
 <header><div class="hd"><a class="lg" href="/">Fasade<em>tjenester</em></a>
 <nav class="anv"><a href="/">Forside</a><a href="/#tjenester">Tjenester</a><a href="/#arshjul">Årshjulet</a><a href="/#om">Om oss</a></nav>
 <a class="btn" href="/#befaring">Gratis befaring</a></div></header>
@@ -71,5 +70,6 @@ main{padding-top:64px}
 <div><p class="kbk">Kontakt oss i dag</p><a class="kbtel" href="tel:+4792979177">929 79 177</a></div>
 <div class="kbact"><a class="btn" href="/#befaring">Bestill gratis befaring</a><a class="btn bg1" href="mailto:post@fasadetjenester.no">Send e-post</a></div>
 </div></section></main>
-<footer><div>© 2026 Fasadetjenester AS · Org.nr. 934 907 035 · <a href="tel:+4792979177" style="color:inherit">929 79 177</a> · <a href="https://moonlandingsite.no" style="color:inherit">Nettside av Moonlanding</a></div></footer>
-</body></html>
+<footer><div>© 2026 Fasadetjenester AS · Org.nr. 934 907 035 · <a href="tel:+4792979177" style="color:inherit">929 79 177</a> · <a href="https://moonlandingsite.no" style="color:inherit">Nettside av Moonlanding</a></div></footer>`}}/>
+  </>)
+}

@@ -1,37 +1,15 @@
-<!doctype html><html lang="nb"><head><meta charset="utf-8">
-<!-- Google Tag Manager (fra fasadetjenester.no) -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KP9PTS6D');</script>
-<!-- End Google Tag Manager -->
-
-<!-- FJERNES ved lansering på eget domene --><meta name="robots" content="noindex, nofollow">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Fasadevask: pris, metode og hvor ofte | Fasadetjenester AS</title>
-<meta name="description" content="Hva koster fasadevask, når bør du velge softwash fremfor høytrykk, og hvor ofte bør fasaden vaskes? Praktisk guide for borettslag, sameier og byggeiere — skrevet av folk som vasker fasader hver dag.">
-<link rel="canonical" href="https://fasadetjenester.no/verdt-a-vite/fasadevask">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[
-{"@type":"Article","@id":"https://fasadetjenester.no/verdt-a-vite/fasadevask/#article",
-"headline":"Fasadevask: pris, metode og hvor ofte bygget bør vaskes",
-"description":"Hva koster fasadevask, når bør du velge softwash fremfor høytrykk, og hvor ofte bør fasaden vaskes? Praktisk guide for borettslag, sameier og byggeiere.",
-"inLanguage":"nb-NO","datePublished":"2026-08-02","dateModified":"2026-08-02",
-"author":{"@type":"Person","name":"Terje Gulliksen","jobTitle":"Daglig leder","worksFor":{"@id":"#org"}},
-"publisher":{"@id":"#org"},
-"mainEntityOfPage":"https://fasadetjenester.no/verdt-a-vite/fasadevask/"},
-{"@type":"LocalBusiness","@id":"#org","name":"Fasadetjenester AS",
-"telephone":"+47 929 79 177","email":"post@fasadetjenester.no",
-"address":{"@type":"PostalAddress","streetAddress":"Mikalsrud 7A","postalCode":"2069","addressLocality":"Jessheim","addressCountry":"NO"},
-"areaServed":["Oslo","Akershus","Østlandet"],"slogan":"Alt utvendig. Én leverandør."},
-{"@type":"Service","name":"Fasadevask","provider":{"@id":"#org"},
-"areaServed":["Oslo","Akershus"],"serviceType":"Fasadevask og utvendig rengjøring"},
-{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Hva koster fasadevask?","acceptedAnswer":{"@type":"Answer","text":"Prisen avhenger av areal, høyde, fasadetype og tilkomst. Et konkret tall får du etter en gratis befaring — da ser vi samtidig om det er andre ting på bygget som bør tas i samme runde. For borettslag og sameier prises jobben per bygg eller som del av en årsavtale."}},{"@type":"Question","name":"Hvor ofte bør en fasade vaskes?","acceptedAnswer":{"@type":"Answer","text":"De fleste fasader bør vaskes hvert 1.–2. år. Nordvendte vegger, fasader nær trafikkert vei og pussede overflater i skygge gror raskere til og kan trenge årlig vask. Venter du til grønsken er synlig fra gata, har den allerede sittet en stund."}},{"@type":"Question","name":"Er høytrykksvask skadelig for fasaden?","acceptedAnswer":{"@type":"Answer","text":"Feil brukt, ja. Høyt trykk rett på puss, eldre tegl eller malt trekledning kan drive vann inn i konstruksjonen og blåse løs maling og fugemasse. Derfor vurderer vi alltid underlaget først, og velger softwash — lavt trykk og riktig middel — der fasaden ikke tåler trykk."}},{"@type":"Question","name":"Hva er softwash?","acceptedAnswer":{"@type":"Answer","text":"Softwash er fasadevask med lavt trykk og et rengjøringsmiddel som løser opp alger, sopp og smuss kjemisk i stedet for mekanisk. Middelet får virke, og skylles så av skånsomt. Metoden dreper begroingen i stedet for bare å fjerne det synlige laget, så fasaden holder seg ren lenger."}},{"@type":"Question","name":"Når på året bør fasaden vaskes?","acceptedAnswer":{"@type":"Answer","text":"Vår og tidlig sommer er høysesong — da tar du vinterens tilsmussing før pollensesongen. Men fasadevask kan utføres store deler av året så lenge det er frostfritt. Skal fasaden males, må den uansett vaskes først."}},{"@type":"Question","name":"Må jeg være hjemme når fasaden vaskes?","acceptedAnswer":{"@type":"Answer","text":"Nei. Vi trenger tilgang til vann og at vinduer er lukket. For borettslag varsler vi beboerne på forhånd, og styret trenger ikke stille med noen på vaskedagen."}}]},
-{"@type":"BreadcrumbList","itemListElement":[
-{"@type":"ListItem","position":1,"name":"Forside","item":"https://fasadetjenester.no/"},
-{"@type":"ListItem","position":2,"name":"Verdt å vite","item":"https://fasadetjenester.no/verdt-a-vite/"},
-{"@type":"ListItem","position":3,"name":"Fasadevask"}]}
-]}</script>
-<style>
+import Script from 'next/script'
+export const metadata = {
+  title: "Fasadevask: pris, metode og hvor ofte | Fasadetjenester AS",
+  description: "Hva koster fasadevask, n\u00e5r b\u00f8r du velge softwash fremfor h\u00f8ytrykk, og hvor ofte b\u00f8r fasaden vaskes? Praktisk guide for borettslag, sameier og byggeiere \u2014 skrevet av folk som vasker fasader hver dag.",
+  robots: { index: false, follow: false },
+  alternates: { canonical: 'https://fasadetjenester.no/verdt-a-vite/fasadevask' }
+}
+export default function Page() {
+  return (<>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com"  crossOrigin="anonymous"/>
+    <style dangerouslySetInnerHTML={{__html: `
 :root{--ink:#0E1826;--navy:#1E3A63;--hiviz:#D8EC3C;--puss:#ECEDE9;--puss2:#DEE0DB;--paper:#fff;--steind:#59606B;
 --d:"Bricolage Grotesque",system-ui,sans-serif;--b:"Inter Tight",system-ui,sans-serif}
 *{box-sizing:border-box}
@@ -75,8 +53,28 @@ figure{margin:34px 0}figcaption{font-size:13.5px;color:var(--steind);margin-top:
 .bagrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 footer{background:var(--ink);color:#98A2B0;padding:34px 0;margin-top:70px;font-size:14px;text-align:center}
 @media(max-width:640px){.forf{grid-template-columns:1fr}.forf img{width:96px}.bagrid{grid-template-columns:1fr}}
-</style></head><body>
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KP9PTS6D" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+`}}/>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{__html: `{"@context":"https://schema.org","@graph":[
+{"@type":"Article","@id":"https://fasadetjenester.no/verdt-a-vite/fasadevask/#article",
+"headline":"Fasadevask: pris, metode og hvor ofte bygget bør vaskes",
+"description":"Hva koster fasadevask, når bør du velge softwash fremfor høytrykk, og hvor ofte bør fasaden vaskes? Praktisk guide for borettslag, sameier og byggeiere.",
+"inLanguage":"nb-NO","datePublished":"2026-08-02","dateModified":"2026-08-02",
+"author":{"@type":"Person","name":"Terje Gulliksen","jobTitle":"Daglig leder","worksFor":{"@id":"#org"}},
+"publisher":{"@id":"#org"},
+"mainEntityOfPage":"https://fasadetjenester.no/verdt-a-vite/fasadevask/"},
+{"@type":"LocalBusiness","@id":"#org","name":"Fasadetjenester AS",
+"telephone":"+47 929 79 177","email":"post@fasadetjenester.no",
+"address":{"@type":"PostalAddress","streetAddress":"Mikalsrud 7A","postalCode":"2069","addressLocality":"Jessheim","addressCountry":"NO"},
+"areaServed":["Oslo","Akershus","Østlandet"],"slogan":"Alt utvendig. Én leverandør."},
+{"@type":"Service","name":"Fasadevask","provider":{"@id":"#org"},
+"areaServed":["Oslo","Akershus"],"serviceType":"Fasadevask og utvendig rengjøring"},
+{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Hva koster fasadevask?","acceptedAnswer":{"@type":"Answer","text":"Prisen avhenger av areal, høyde, fasadetype og tilkomst. Et konkret tall får du etter en gratis befaring — da ser vi samtidig om det er andre ting på bygget som bør tas i samme runde. For borettslag og sameier prises jobben per bygg eller som del av en årsavtale."}},{"@type":"Question","name":"Hvor ofte bør en fasade vaskes?","acceptedAnswer":{"@type":"Answer","text":"De fleste fasader bør vaskes hvert 1.–2. år. Nordvendte vegger, fasader nær trafikkert vei og pussede overflater i skygge gror raskere til og kan trenge årlig vask. Venter du til grønsken er synlig fra gata, har den allerede sittet en stund."}},{"@type":"Question","name":"Er høytrykksvask skadelig for fasaden?","acceptedAnswer":{"@type":"Answer","text":"Feil brukt, ja. Høyt trykk rett på puss, eldre tegl eller malt trekledning kan drive vann inn i konstruksjonen og blåse løs maling og fugemasse. Derfor vurderer vi alltid underlaget først, og velger softwash — lavt trykk og riktig middel — der fasaden ikke tåler trykk."}},{"@type":"Question","name":"Hva er softwash?","acceptedAnswer":{"@type":"Answer","text":"Softwash er fasadevask med lavt trykk og et rengjøringsmiddel som løser opp alger, sopp og smuss kjemisk i stedet for mekanisk. Middelet får virke, og skylles så av skånsomt. Metoden dreper begroingen i stedet for bare å fjerne det synlige laget, så fasaden holder seg ren lenger."}},{"@type":"Question","name":"Når på året bør fasaden vaskes?","acceptedAnswer":{"@type":"Answer","text":"Vår og tidlig sommer er høysesong — da tar du vinterens tilsmussing før pollensesongen. Men fasadevask kan utføres store deler av året så lenge det er frostfritt. Skal fasaden males, må den uansett vaskes først."}},{"@type":"Question","name":"Må jeg være hjemme når fasaden vaskes?","acceptedAnswer":{"@type":"Answer","text":"Nei. Vi trenger tilgang til vann og at vinduer er lukket. For borettslag varsler vi beboerne på forhånd, og styret trenger ikke stille med noen på vaskedagen."}}]},
+{"@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Forside","item":"https://fasadetjenester.no/"},
+{"@type":"ListItem","position":2,"name":"Verdt å vite","item":"https://fasadetjenester.no/verdt-a-vite/"},
+{"@type":"ListItem","position":3,"name":"Fasadevask"}]}
+]}`}}/>
+    <div dangerouslySetInnerHTML={{__html: `
 
 <header><div class="hd"><a class="lg" href="/">Fasade<em>tjenester</em></a>
 <nav class="anv"><a href="/">Forside</a><a href="/#tjenester">Tjenester</a><a href="/verdt-a-vite">Verdt å vite</a><a href="/#om">Om oss</a></nav><a class="btn" href="/#befaring">Gratis befaring</a></div></header>
@@ -145,5 +143,6 @@ footer{background:var(--ink);color:#98A2B0;padding:34px 0;margin-top:70px;font-s
 <a class="btn" href="/#befaring">Bestill gratis befaring</a></div>
 </div>
 
-<footer><div>© 2026 Fasadetjenester AS · Org.nr. 934 907 035 · 929 79 177 · post@fasadetjenester.no · <a href="https://moonlandingsite.no" style="color:inherit">Nettside av Moonlanding</a></div></footer>
-</body></html>
+<footer><div>© 2026 Fasadetjenester AS · Org.nr. 934 907 035 · 929 79 177 · post@fasadetjenester.no · <a href="https://moonlandingsite.no" style="color:inherit">Nettside av Moonlanding</a></div></footer>`}}/>
+  </>)
+}
