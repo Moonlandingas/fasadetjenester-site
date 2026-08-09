@@ -1,0 +1,8 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/kontakt-oss", "destination": "/#befaring", "permanent": false },
+    { "source": "/kontakt-oss/", "destination": "/#befaring", "permanent": false }
+  ]
+}
