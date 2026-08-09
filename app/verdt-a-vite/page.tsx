@@ -1,8 +1,9 @@
 import Script from 'next/script'
+import { LIVE } from '../../lib/site'
 export const metadata = {
   title: "Verdt \u00e5 vite \u2014 r\u00e5d om fasade, tak og vedlikehold | Fasadetjenester AS",
   description: "Korte, \u00e6rlige artikler om fasadevask, takrenner, vintersikring og bygningsvedlikehold \u2014 skrevet av fagfolkene som gj\u00f8r jobben, for styrer og byggeiere.",
-  robots: { index: false, follow: false }, // fjernes via LIVE-bryteren ved lansering
+  robots: { index: LIVE, follow: LIVE },
   alternates: { canonical: '/verdt-a-vite' },
   openGraph: {
     title: "Verdt \u00e5 vite \u2014 r\u00e5d om fasade, tak og vedlikehold | Fasadetjenester AS",
