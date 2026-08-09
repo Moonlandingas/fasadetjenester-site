@@ -1,8 +1,17 @@
 import Script from 'next/script'
 export const metadata = {
   title: "Tusen takk! | Fasadetjenester AS",
-  description: "",
-  robots: { index: false, follow: false }
+  description: "Henvendelsen er mottatt \u2014 vi ringer deg i l\u00f8pet av dagen.",
+  robots: { index: false, follow: false }, // fjernes via LIVE-bryteren ved lansering
+  alternates: { canonical: '/tusen-takk' },
+  openGraph: {
+    title: "Tusen takk! | Fasadetjenester AS",
+    description: "Henvendelsen er mottatt \u2014 vi ringer deg i l\u00f8pet av dagen.",
+    url: '/tusen-takk',
+    siteName: 'Fasadetjenester AS',
+    locale: 'nb_NO',
+    type: 'website',
+  },
 }
 export default function Page() {
   return (<>

@@ -1,9 +1,17 @@
 import Script from 'next/script'
 export const metadata = {
   title: "Fasadevask: pris, metode og hvor ofte | Fasadetjenester AS",
-  description: "Hva koster fasadevask, n\u00e5r b\u00f8r du velge softwash fremfor h\u00f8ytrykk, og hvor ofte b\u00f8r fasaden vaskes? Praktisk guide for borettslag, sameier og byggeiere \u2014 skrevet av folk som vasker fasader hver dag.",
-  robots: { index: false, follow: false },
-  alternates: { canonical: 'https://fasadetjenester.no/verdt-a-vite/fasadevask' }
+  description: "Hva koster fasadevask? N\u00e5r b\u00f8r du velge softwash fremfor h\u00f8ytrykk, og hvor ofte b\u00f8r fasaden vaskes? Guide for borettslag, sameier og byggeiere i Oslo og omegn.",
+  robots: { index: false, follow: false }, // fjernes via LIVE-bryteren ved lansering
+  alternates: { canonical: '/verdt-a-vite/fasadevask' },
+  openGraph: {
+    title: "Fasadevask: pris, metode og hvor ofte | Fasadetjenester AS",
+    description: "Hva koster fasadevask? N\u00e5r b\u00f8r du velge softwash fremfor h\u00f8ytrykk, og hvor ofte b\u00f8r fasaden vaskes? Guide for borettslag, sameier og byggeiere i Oslo og omegn.",
+    url: '/verdt-a-vite/fasadevask',
+    siteName: 'Fasadetjenester AS',
+    locale: 'nb_NO',
+    type: 'website',
+  },
 }
 export default function Page() {
   return (<>

@@ -1,8 +1,17 @@
 import Script from 'next/script'
 export const metadata = {
-  title: "Fasadetjenester AS \u2014 Alt utvendig. \u00c9n leverand\u00f8r.",
-  description: "",
-  robots: { index: false, follow: false }
+  title: "Fasadevask og utvendig vedlikehold | Fasadetjenester AS",
+  description: "Fasadevask, grafittifjerning, takrennerens, vintersikring og h\u00e5ndverk for borettslag, sameier og n\u00e6ringsbygg i Oslo, Akershus og hele S\u00f8r\u00f8st-Norge. Gratis befaring \u2014 \u00e9n leverand\u00f8r, hele \u00e5ret.",
+  robots: { index: false, follow: false }, // fjernes via LIVE-bryteren ved lansering
+  alternates: { canonical: '/' },
+  openGraph: {
+    title: "Fasadevask og utvendig vedlikehold | Fasadetjenester AS",
+    description: "Fasadevask, grafittifjerning, takrennerens, vintersikring og h\u00e5ndverk for borettslag, sameier og n\u00e6ringsbygg i Oslo, Akershus og hele S\u00f8r\u00f8st-Norge. Gratis befaring \u2014 \u00e9n leverand\u00f8r, hele \u00e5ret.",
+    url: '/',
+    siteName: 'Fasadetjenester AS',
+    locale: 'nb_NO',
+    type: 'website',
+  },
 }
 export default function Page() {
   return (<>

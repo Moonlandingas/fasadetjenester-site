@@ -1,8 +1,17 @@
 import Script from 'next/script'
 export const metadata = {
-  title: "Verdt \u00e5 vite \u2014 r\u00e5d og artikler | Fasadetjenester AS",
-  description: "Korte, \u00e6rlige artikler om fasadevask, tak, vintersikring og bygningsvedlikehold \u2014 skrevet av folk som gj\u00f8r jobben selv.",
-  robots: { index: false, follow: false }
+  title: "Verdt \u00e5 vite \u2014 r\u00e5d om fasade, tak og vedlikehold | Fasadetjenester AS",
+  description: "Korte, \u00e6rlige artikler om fasadevask, takrenner, vintersikring og bygningsvedlikehold \u2014 skrevet av fagfolkene som gj\u00f8r jobben, for styrer og byggeiere.",
+  robots: { index: false, follow: false }, // fjernes via LIVE-bryteren ved lansering
+  alternates: { canonical: '/verdt-a-vite' },
+  openGraph: {
+    title: "Verdt \u00e5 vite \u2014 r\u00e5d om fasade, tak og vedlikehold | Fasadetjenester AS",
+    description: "Korte, \u00e6rlige artikler om fasadevask, takrenner, vintersikring og bygningsvedlikehold \u2014 skrevet av fagfolkene som gj\u00f8r jobben, for styrer og byggeiere.",
+    url: '/verdt-a-vite',
+    siteName: 'Fasadetjenester AS',
+    locale: 'nb_NO',
+    type: 'website',
+  },
 }
 export default function Page() {
   return (<>
