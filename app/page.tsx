@@ -1,8 +1,9 @@
 import Script from 'next/script'
+import { LIVE } from '../lib/site'
 export const metadata = {
   title: "Fasadevask og utvendig vedlikehold | Fasadetjenester AS",
   description: "Fasadevask, grafittifjerning, takrennerens, vintersikring og h\u00e5ndverk for borettslag, sameier og n\u00e6ringsbygg i Oslo, Akershus og hele S\u00f8r\u00f8st-Norge. Gratis befaring \u2014 \u00e9n leverand\u00f8r, hele \u00e5ret.",
-  robots: { index: false, follow: false }, // fjernes via LIVE-bryteren ved lansering
+  robots: { index: LIVE, follow: LIVE },
   alternates: { canonical: '/' },
   openGraph: {
     title: "Fasadevask og utvendig vedlikehold | Fasadetjenester AS",
