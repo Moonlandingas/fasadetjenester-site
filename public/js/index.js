@@ -66,9 +66,22 @@ var fg=document.querySelector('#befaring .fg');
 [].forEach.call(document.querySelectorAll('input[name=ktype]'),function(r){
 r.addEventListener('change',function(){fg.classList.toggle('privat',r.value==='privat'&&r.checked);});});
 var hv=document.getElementById('heroVideo'),hf=document.getElementById('heroFallback');
-if(hv){if(hv.querySelector('source').src.indexOf('VIDEO_URL')>-1){hv.remove();}
-else{hv.addEventListener('playing',function(){if(hf)hf.style.visibility='hidden';});
-hv.addEventListener('error',function(){hv.remove();},true);}}
+if(hv){
+  // Attributter satt via innerHTML setter ikke alltid PROPERTY-ene — nettleseren
+  // blokkerer da autoplay. Vi setter dem eksplisitt og starter avspilling.
+  hv.muted=true; hv.defaultMuted=true; hv.playsInline=true; hv.loop=true;
+  hv.setAttribute('muted','');
+  hv.addEventListener('playing',function(){ if(hf) hf.style.visibility='hidden'; });
+  hv.addEventListener('error',function(){ if(hf) hf.style.visibility='visible'; hv.style.display='none'; },true);
+  try{ hv.load(); }catch(e){}
+  var p=hv.play();
+  if(p&&p.catch){ p.catch(function(){
+    // Autoplay avvist (f.eks. strømsparing): prøv igjen ved første interaksjon
+    var kick=function(){ hv.play().catch(function(){}); document.removeEventListener('touchstart',kick); document.removeEventListener('click',kick); };
+    document.addEventListener('touchstart',kick,{once:true});
+    document.addEventListener('click',kick,{once:true});
+  }); }
+}
 var hdr=document.getElementById('hdr');
 var thc=document.getElementById('thc');function os(){var on=window.scrollY>70;hdr.classList.toggle('st',on);if(thc)thc.setAttribute('content',on?'#ffffff':'#0E1826');}
 window.addEventListener('scroll',os,{passive:true});os();

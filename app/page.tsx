@@ -240,9 +240,7 @@ footer{background:var(--ink);color:#98A2B0;padding:64px 0 40px;font-size:14.5px}
 </div>
 
 <div class="hero"><div class="hbg">
-<video autoplay muted loop playsinline preload="metadata" poster="/img/hero.webp" id="heroVideo">
-<source src="https://fasadetjenester.no/wp-content/uploads/2025/12/Banner-video.mp4" type="video/mp4">
-</video>
+<video autoplay muted loop playsinline preload="auto" poster="/img/hero.webp" id="heroVideo" src="https://fasadetjenester.no/wp-content/uploads/2025/12/Banner-video.mp4"></video>
 <img src="/img/hero.webp" alt="Fasadetjenester AS — banner på stillas i Oslo" id="heroFallback"></div>
 <div class="hin"><div class="wrap">
 <p class="ey" style="color:var(--hiviz)">Gratis befaring — hele året</p>
