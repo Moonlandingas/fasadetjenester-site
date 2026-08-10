@@ -314,7 +314,7 @@ footer{background:var(--ink);color:#98A2B0;padding:64px 0 40px;font-size:14.5px}
 <p style="color:var(--steind);max-width:46ch">Fasadetjenester er et lite firma med korte linjer. Du får samme kontaktperson gjennom hele jobben — og gjennom hele året. Rådene og artiklene her på siden er skrevet av oss som faktisk gjør arbeidet.</p>
 <div class="os"><i></i><div><strong>Terje Gulliksen</strong><br><span style="color:var(--steind)">Daglig leder, Fasadetjenester AS</span></div></div>
 <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:26px"><div class="badge" style="margin-top:0"><i></i>Offentlig godkjent renholdsbedrift</div><div class="badge" style="margin-top:0"><i></i>Miljøfyrtårn-sertifisert</div></div>
-<p style="color:var(--steind);margin-top:22px;font-size:15px;max-width:46ch">På laget står også Steinar — drift og vakttelefon — og faste, kvalitetssikrede underleverandører. <span class="tbd">Foto og presentasjon av teamet kommer.</span></p>
+<p style="color:var(--steind);margin-top:22px;font-size:15px;max-width:46ch">På laget står også Steinar — drift og vakttelefon — og faste, kvalitetssikrede underleverandører.</p>
 <p style="margin-top:18px"><a class="la" href="#">Møt hele teamet <span aria-hidden="true">→</span></a></p></div></div></section>
 
 <section id="hms"><div class="wrap">
@@ -326,7 +326,7 @@ footer{background:var(--ink);color:#98A2B0;padding:64px 0 40px;font-size:14.5px}
 <div class="hmsc"><h3>Sikring og sperring</h3><p>Sikrings- og sperretjenester med skilting av fortau og inngangspartier. Vi leverer også rasfare- og istappskilt til bygårder — like gode som konkurrentenes, til lavere pris.</p></div>
 <div class="hmsc"><h3>Vernestatus sjekkes alltid</h3><p>Før vi velger metode sjekker vi eiendommens vernestatus, slik at verneverdige fasader behandles riktig fra første vask.</p></div>
 </div>
-<p class="rv" style="margin-top:30px;font-size:16px"><strong style="font-family:var(--d)">Akutt behov?</strong> Vi har døgnvakt — ring vakttelefonen: <span class="tbd">nummer legges inn</span>.</p>
+<p class="rv" style="margin-top:30px;font-size:16px"><strong style="font-family:var(--d)">Akutt behov?</strong> Vi har døgnvakt. Ring <a href="tel:+4792979177" style="color:inherit;font-weight:600">929 79 177</a>, så kobler vi deg videre til vakthavende.</p>
 </div></section>
 
 <section class="dk" id="omrader"><div class="wrap">

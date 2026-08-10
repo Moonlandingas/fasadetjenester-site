@@ -3,6 +3,19 @@
   "trailingSlash": false,
   "redirects": [
     { "source": "/kontakt-oss", "destination": "/#befaring", "permanent": false },
-    { "source": "/kontakt-oss/", "destination": "/#befaring", "permanent": false }
+    { "source": "/fasadevask", "destination": "/verdt-a-vite/fasadevask", "permanent": true },
+    { "source": "/takrennerens", "destination": "/#tjenester", "permanent": true },
+    { "source": "/garasjevask", "destination": "/#tjenester", "permanent": true },
+    { "source": "/grafittifjerning", "destination": "/#tjenester", "permanent": true },
+    { "source": "/vindusvask", "destination": "/#tjenester", "permanent": true },
+    { "source": "/vinduspuss", "destination": "/#tjenester", "permanent": true },
+    { "source": "/istappfjerning", "destination": "/#tjenester", "permanent": true },
+    { "source": "/verd-a-vite", "destination": "/verdt-a-vite", "permanent": true },
+    { "source": "/profesjonell-graffitifjerning-beskytt-eiendommens-image", "destination": "/#tjenester", "permanent": true },
+    { "source": "/sikkert-og-effektivt-utvendig-vedlikehold-for-alle-bygningstyper", "destination": "/verdt-a-vite", "permanent": true },
+    { "source": "/hvorfor-regelmessig-fasaderengjoring-er-viktig-for-langsiktig-bygningspleie", "destination": "/verdt-a-vite/fasadevask", "permanent": true },
+    { "source": "/norgespris-varmepumpe-sant", "destination": "/verdt-a-vite", "permanent": true },
+    { "source": "/author/facade-tjenester", "destination": "/#om", "permanent": true },
+    { "source": "/author/:slug", "destination": "/#om", "permanent": true }
   ]
 }
