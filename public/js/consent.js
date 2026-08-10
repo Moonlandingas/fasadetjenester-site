@@ -9,6 +9,7 @@ function done(v){try{localStorage.setItem('ft-consent',v);}catch(e){}b.remove();
 document.getElementById('ftcb-ok').addEventListener('click',function(){
 window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
 gtag('consent','update',{ad_storage:'granted',ad_user_data:'granted',ad_personalization:'granted',analytics_storage:'granted'});
+window._paq=window._paq||[];window._paq.push(['setCookieConsentGiven']);
 done('all');});
 document.getElementById('ftcb-no').addEventListener('click',function(){done('necessary');});
 })();

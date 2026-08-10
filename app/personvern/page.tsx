@@ -40,7 +40,7 @@ footer a{color:inherit}
         <strong>Behandlingsansvarlig</strong><br/>
         Fasadetjenester AS · Org.nr. 934 907 035<br/>
         Mikalsrud 7A, 2069 Jessheim<br/>
-        Telefon: <a href="tel:+4792979177">929 79 177</a> · E-post: <a href="mailto:post@fasadetjenester.no">post@fasadetjenester.no</a><br/>
+        Telefon: <a href="tel:+4792979177">929 79 177</a> · E-post: <a href="mailto:terje@fasadetjenester.no">terje@fasadetjenester.no</a><br/>
         Fasadetjenester AS er en del av TG-Renhold Holding AS.
       </div>
 
@@ -69,7 +69,7 @@ footer a{color:inherit}
       <p>Personopplysninger lagres så lenge det er nødvendig for formålet de ble samlet inn for, eller så lenge lovpålagte krav tilsier det. Henvendelser som ikke fører til oppdrag, slettes når de ikke lenger er aktuelle.</p>
 
       <h2>Dine rettigheter</h2>
-      <p>Du har rett til innsyn i egne opplysninger, retting av feil, sletting, begrensning av behandling, dataportabilitet, og til å trekke tilbake et samtykke. Ta kontakt på <a href="mailto:post@fasadetjenester.no">post@fasadetjenester.no</a>, så svarer vi så raskt vi kan. Mener du at vi behandler opplysninger i strid med regelverket, kan du klage til Datatilsynet.</p>
+      <p>Du har rett til innsyn i egne opplysninger, retting av feil, sletting, begrensning av behandling, dataportabilitet, og til å trekke tilbake et samtykke. Ta kontakt på <a href="mailto:terje@fasadetjenester.no">terje@fasadetjenester.no</a>, så svarer vi så raskt vi kan. Mener du at vi behandler opplysninger i strid med regelverket, kan du klage til Datatilsynet.</p>
 
       <h2>Endringer</h2>
       <p>Vi kan oppdatere denne erklæringen ved endringer i tjenestene eller regelverket. Gjeldende versjon ligger alltid på denne siden.</p>

@@ -12,6 +12,7 @@ export const metadata = {
     siteName: 'Fasadetjenester AS',
     locale: 'nb_NO',
     type: 'website',
+    images: [{ url: '/img/og.jpg', width: 1200, height: 630, alt: 'Fasadetjenester AS — fasadevask og utvendig vedlikehold' }],
   },
 }
 export default function Page() {
@@ -69,16 +70,18 @@ main{padding-top:64px}
 <p class="cn">Fasadevask · Vår</p><h2>Fasadevask: pris, metode og hvor ofte bygget bør vaskes</h2>
 <p>Hva koster fasadevask, når lønner softwash seg fremfor høytrykk, og hvorfor grønske er mer enn et kosmetisk problem.</p>
 <span class="la">Les artikkelen →</span></div></a>
-<div class="card tbd"><img src="/img/ba_tak_for.webp" alt="" loading="lazy"><div class="cb">
+<a class="card" href="/verdt-a-vite/takrenner"><img src="/img/ba_tak_for.webp" alt="Takrenne full av løv før rens" loading="lazy"><div class="cb">
 <p class="cn">Tak og takrenner · Høst</p><h2>Hva løv i takrennen faktisk koster deg</h2>
-<p>Publiseres før høstsesongen. Frostskader, overvann og hvorfor oktober er fristen.</p></div></div>
-<div class="card tbd"><img src="/img/c_vinter.webp" alt="" loading="lazy"><div class="cb">
+<p>Overvann på fasaden, fukt i grunnmuren og is om vinteren — og hvorfor oktober er fristen.</p>
+<span class="la">Les artikkelen →</span></div></a>
+<a class="card" href="/verdt-a-vite/istapper"><img src="/img/c_vinter.webp" alt="Vintersikring av bygg — istappfjerning og snørydding av tak" loading="lazy"><div class="cb">
 <p class="cn">Vinter og sikring · Vinter</p><h2>Istapper: styrets ansvar — og hva det betyr i praksis</h2>
-<p>Publiseres før vintersesongen. Ansvar, varslingsplikt og beredskapsavtale.</p></div></div>
+<p>Hva politivedtektene krever, hvorfor varselskilt ikke er nok, og hva en beredskapsavtale bør inneholde.</p>
+<span class="la">Les artikkelen →</span></div></a>
 </div></div>
 <section class="kb"><div class="wrap kbw">
 <div><p class="kbk">Kontakt oss i dag</p><a class="kbtel" href="tel:+4792979177">929 79 177</a></div>
-<div class="kbact"><a class="btn" href="/#befaring">Bestill gratis befaring</a><a class="btn bg1" href="mailto:post@fasadetjenester.no">Send e-post</a></div>
+<div class="kbact"><a class="btn" href="/#befaring">Bestill gratis befaring</a><a class="btn bg1" href="mailto:terje@fasadetjenester.no">Send e-post</a></div>
 </div></section></main>
 <footer><div>© 2026 Fasadetjenester AS · Org.nr. 934 907 035 · <a href="tel:+4792979177" style="color:inherit">929 79 177</a> · <a href="https://moonlandingsite.no" style="color:inherit">Nettside av Moonlanding</a></div></footer>`}}/>
   </>)

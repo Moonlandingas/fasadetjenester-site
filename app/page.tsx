@@ -12,6 +12,7 @@ export const metadata = {
     siteName: 'Fasadetjenester AS',
     locale: 'nb_NO',
     type: 'website',
+    images: [{ url: '/img/og.jpg', width: 1200, height: 630, alt: 'Fasadetjenester AS — fasadevask og utvendig vedlikehold' }],
   },
 }
 export default function Page() {
@@ -114,7 +115,7 @@ header.st .lg em{color:var(--navy)}header.st .bg1{border-color:var(--ink);color:
 .tr b{font-family:var(--d);font-size:30px;font-weight:600}.tr.ac b{color:var(--hiviz)}
 .tn{font-size:14px;color:rgba(255,255,255,.62);margin:20px 0 22px}
 .cats{margin-top:48px;border-top:1px solid var(--puss2)}
-.cat{display:grid;grid-template-columns:230px 1fr;gap:44px;padding:44px 0;border-bottom:1px solid var(--puss2);align-items:start}
+.cat{display:grid;grid-template-columns:230px 1fr;gap:44px;padding:44px 0;border-bottom:1px solid var(--puss2);align-items:start;scroll-margin-top:88px}
 .cm img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:var(--r)}
 .cn{font-family:var(--d);font-size:13px;letter-spacing:.14em;color:var(--navy);margin:0 0 8px}
 .ct{font-size:clamp(27px,3vw,35px);margin:0 0 12px}.cl{max-width:52ch;color:var(--steind)}
@@ -206,10 +207,10 @@ footer{background:var(--ink);color:#98A2B0;padding:64px 0 40px;font-size:14.5px}
 <nav class="nv">
 <div class="ni"><a href="#tjenester">Tjenester <span aria-hidden="true">&#9662;</span></a>
 <div class="sub"><div class="subin">
-<a href="#tjenester">Fasadevask og utvendig rengjøring</a>
-<a href="#tjenester">Håndverk — mur, tak, maling</a>
-<a href="#tjenester">Vinter og sikring</a>
-<a href="#tjenester">Løpende renhold</a>
+<a href="#fasadevask-rengjoring">Fasadevask og utvendig rengjøring</a>
+<a href="#handverk">Håndverk — mur, tak, maling</a>
+<a href="#vinter-sikring">Vinter og sikring</a>
+<a href="#renhold">Løpende renhold</a>
 <a class="all" href="#tjenester">Se alle tjenester &rarr;</a>
 </div></div></div>
 <a href="#arshjul">Årshjulet</a>
@@ -217,6 +218,8 @@ footer{background:var(--ink);color:#98A2B0;padding:64px 0 40px;font-size:14.5px}
 <div class="ni"><a href="/verdt-a-vite">Verdt å vite <span aria-hidden="true">&#9662;</span></a>
 <div class="sub"><div class="subin">
 <a href="/verdt-a-vite/fasadevask">Fasadevask: pris, metode og intervall</a>
+<a href="/verdt-a-vite/takrenner">Takrennerens: hva løv koster deg</a>
+<a href="/verdt-a-vite/istapper">Istapper: styrets ansvar</a>
 <a class="all" href="/verdt-a-vite">Alle artikler &rarr;</a>
 </div></div></div>
 <a href="#om">Om oss</a>
@@ -227,14 +230,16 @@ footer{background:var(--ink);color:#98A2B0;padding:64px 0 40px;font-size:14.5px}
 <a class="btn bs1" href="#befaring"><span class="cl1">Gratis befaring</span><span class="cs1">Befaring</span></a></div></header>
 <div class="mm" id="mm">
 <h5>Tjenester</h5>
-<a href="#tjenester">Fasadevask og utvendig rengjøring</a>
-<a href="#tjenester">Håndverk — mur, tak, maling</a>
-<a href="#tjenester">Vinter og sikring</a>
-<a href="#tjenester">Løpende renhold</a>
+<a href="#fasadevask-rengjoring">Fasadevask og utvendig rengjøring</a>
+<a href="#handverk">Håndverk — mur, tak, maling</a>
+<a href="#vinter-sikring">Vinter og sikring</a>
+<a href="#renhold">Løpende renhold</a>
 <h5>Selskapet</h5>
 <a href="#arshjul">Årshjulet</a>
 <a href="#resultater">Før og etter</a>
 <a href="/verdt-a-vite">Verdt å vite</a>
+<a href="/verdt-a-vite/takrenner">Takrennerens</a>
+<a href="/verdt-a-vite/istapper">Istapper og takras</a>
 <a href="#om">Om oss</a>
 <a href="#omrader">Områder</a>
 <h5>Kontakt</h5>
@@ -261,7 +266,7 @@ footer{background:var(--ink);color:#98A2B0;padding:64px 0 40px;font-size:14.5px}
 
 <section class="kb"><div class="wrap kbw">
 <div><p class="kbk">Kontakt oss i dag</p><a class="kbtel" href="tel:+4792979177">929 79 177</a></div>
-<div class="kbact"><a class="btn bs1" href="#befaring">Bestill gratis befaring</a><a class="btn bg1" href="mailto:post@fasadetjenester.no">Send e-post</a></div>
+<div class="kbact"><a class="btn bs1" href="#befaring">Bestill gratis befaring</a><a class="btn bg1" href="mailto:terje@fasadetjenester.no">Send e-post</a></div>
 </div></section>
 
 <section class="dk" id="arshjul"><div class="wrap">
@@ -289,8 +294,8 @@ footer{background:var(--ink);color:#98A2B0;padding:64px 0 40px;font-size:14.5px}
 <section class="pa" id="tjenester"><div class="wrap">
 <div class="nar rv"><p class="ey">Tjenester</p><h2 class="h2">Fire områder. Én leverandør.</h2>
 <p style="font-size:18.5px;color:var(--steind);margin-top:18px">Hvert område får sin egen side med undertjenester, priseksempler og bilder fra faktiske jobber — slik at et søk på «lekkasje tak» eller «grafittifjerning Oslo» lander riktig med én gang.</p></div>
-<div class="cats rv"><article class="cat"><div class="cm"><img src="/img/c_fasade.webp" alt="Fasadevask og utvendig rengjøring" loading="lazy"></div><div class="cb"><p class="cn">01</p><h3 class="ct">Fasadevask og utvendig rengjøring</h3><p class="cl">Hele det utvendige, fra rekkverk til gesims. Softwash der overflaten er sårbar, høytrykk der den tåler det.</p><ul class="cs"><li>Fasadevask</li><li>Vindusvask</li><li>Grafittifjerning</li><li>Garasjevask</li><li>Softwash</li><li>Høytrykksvask</li><li>Algevask og mosevask</li><li>Utvendig rengjøring av næringsbygg</li></ul><a class="la" href="#befaring">Be om pris <span aria-hidden="true">→</span></a></div></article><article class="cat"><div class="cm"><img src="/img/c_handverk.webp" alt="Håndverk" loading="lazy"></div><div class="cb"><p class="cn">02</p><h3 class="ct">Håndverk</h3><p class="cl">Mur, betong, tak, beslag og snekker. Ser vi skadet puss eller rusten armering under befaringen, kan vi ta det selv — uten å hente inn noen andre.</p>
-<p class="cl" style="margin-top:-6px">Tak- og metallarbeid dekker både blikkenslager- og kobberslagerfaget: beslag, pipebeslag, takrenner og nedløp, taktekking og fasadeelementer i stål, sink og aluminium — og de tynnere kobberarbeidene på eldre bygg, fra takdetaljer til tårnspir. Gammel metalltradisjon møter moderne byggteknikk, og på bygårder er det ofte nettopp dette arbeidet som avgjør om taket holder tett i tiår.</p><ul class="cs"><li>Murreparasjon og betongrehabilitering</li><li>Fasademaling</li><li>Taktekking og takreparasjon</li><li>Lekkasje i tak</li><li>Blikkenslagerarbeid</li><li>Kobberslagerarbeid</li><li>Beslag og pipebeslag</li><li>Snekkerarbeid</li><li>Levegg</li><li>Tilstandsrapport</li></ul><a class="la" href="#befaring">Be om pris <span aria-hidden="true">→</span></a></div></article><article class="cat"><div class="cm"><img src="/img/c_vinter.webp" alt="Vinter og sikring" loading="lazy"></div><div class="cb"><p class="cn">03</p><h3 class="ct">Vinter og sikring</h3><p class="cl">Fra første frost til siste tine. Med fast avtale er vi der før dere rekker å ringe.</p><ul class="cs"><li>Istappfjerning</li><li>Snørydding av tak</li><li>Salting og strøing</li><li>Issikring</li><li>Vintervedlikehold</li><li>Rasfare- og istappskilt</li></ul><a class="la" href="#befaring">Be om pris <span aria-hidden="true">→</span></a></div></article><article class="cat"><div class="cm"><img src="/img/c_renhold.webp" alt="Løpende renhold" loading="lazy"></div><div class="cb"><p class="cn">04</p><h3 class="ct">Løpende renhold</h3><p class="cl">Daglig og fast renhold av nærings- og kontorbygg. Offentlig godkjent renholdsbedrift — og samme kontaktperson som for alt det andre.</p><ul class="cs"><li>Daglig renhold</li><li>Kontorrenhold</li><li>Renholdsavtale</li><li>Trappevask</li></ul><a class="la" href="#befaring">Be om pris <span aria-hidden="true">→</span></a></div></article></div></div></section>
+<div class="cats rv"><article class="cat" id="fasadevask-rengjoring"><div class="cm"><img src="/img/c_fasade.webp" alt="Fasadevask og utvendig rengjøring" loading="lazy"></div><div class="cb"><p class="cn">01</p><h3 class="ct">Fasadevask og utvendig rengjøring</h3><p class="cl">Hele det utvendige, fra rekkverk til gesims. Softwash der overflaten er sårbar, høytrykk der den tåler det.</p><ul class="cs"><li>Fasadevask</li><li>Vindusvask</li><li>Grafittifjerning</li><li>Garasjevask</li><li>Softwash</li><li>Høytrykksvask</li><li>Algevask og mosevask</li><li>Utvendig rengjøring av næringsbygg</li></ul><a class="la" href="#befaring">Be om pris <span aria-hidden="true">→</span></a></div></article><article class="cat" id="handverk"><div class="cm"><img src="/img/c_handverk.webp" alt="Håndverk" loading="lazy"></div><div class="cb"><p class="cn">02</p><h3 class="ct">Håndverk</h3><p class="cl">Mur, betong, tak, beslag og snekker. Ser vi skadet puss eller rusten armering under befaringen, kan vi ta det selv — uten å hente inn noen andre.</p>
+<p class="cl" style="margin-top:-6px">Tak- og metallarbeid dekker både blikkenslager- og kobberslagerfaget: beslag, pipebeslag, takrenner og nedløp, taktekking og fasadeelementer i stål, sink og aluminium — og de tynnere kobberarbeidene på eldre bygg, fra takdetaljer til tårnspir. Gammel metalltradisjon møter moderne byggteknikk, og på bygårder er det ofte nettopp dette arbeidet som avgjør om taket holder tett i tiår.</p><ul class="cs"><li>Murreparasjon og betongrehabilitering</li><li>Fasademaling</li><li>Taktekking og takreparasjon</li><li>Lekkasje i tak</li><li>Blikkenslagerarbeid</li><li>Kobberslagerarbeid</li><li>Beslag og pipebeslag</li><li>Snekkerarbeid</li><li>Levegg</li><li>Tilstandsrapport</li></ul><a class="la" href="#befaring">Be om pris <span aria-hidden="true">→</span></a></div></article><article class="cat" id="vinter-sikring"><div class="cm"><img src="/img/c_vinter.webp" alt="Vinter og sikring" loading="lazy"></div><div class="cb"><p class="cn">03</p><h3 class="ct">Vinter og sikring</h3><p class="cl">Fra første frost til siste tine. Med fast avtale er vi der før dere rekker å ringe.</p><ul class="cs"><li>Istappfjerning</li><li>Snørydding av tak</li><li>Salting og strøing</li><li>Issikring</li><li>Vintervedlikehold</li><li>Rasfare- og istappskilt</li></ul><a class="la" href="#befaring">Be om pris <span aria-hidden="true">→</span></a></div></article><article class="cat" id="renhold"><div class="cm"><img src="/img/c_renhold.webp" alt="Løpende renhold" loading="lazy"></div><div class="cb"><p class="cn">04</p><h3 class="ct">Løpende renhold</h3><p class="cl">Daglig og fast renhold av nærings- og kontorbygg. Offentlig godkjent renholdsbedrift — og samme kontaktperson som for alt det andre.</p><ul class="cs"><li>Daglig renhold</li><li>Kontorrenhold</li><li>Renholdsavtale</li><li>Trappevask</li></ul><a class="la" href="#befaring">Be om pris <span aria-hidden="true">→</span></a></div></article></div></div></section>
 
 <section class="dk" id="resultater"><div class="wrap">
 <div class="nar rv"><p class="ey">Før og etter</p><h2 class="h2">Dra i linja og se forskjellen.</h2>
@@ -346,8 +351,8 @@ footer{background:var(--ink);color:#98A2B0;padding:64px 0 40px;font-size:14.5px}
 <p style="font-size:18.5px;color:var(--steind);margin-top:18px">Korte, ærlige svar på det kundene faktisk spør oss om — skrevet av oss, ikke av et innholdsbyrå.</p></div>
 <div class="vvg rv">
 <a class="vv" href="/verdt-a-vite/fasadevask"><p class="cn">Fasadevask</p><h3>Fasadevask: pris, metode og hvor ofte bygget bør vaskes</h3><p>Hva koster fasadevask, når lønner softwash seg fremfor høytrykk, og hvorfor grønske er mer enn et kosmetisk problem.</p><span class="la">Les artikkelen <span aria-hidden="true">→</span></span></a>
-<div class="vv tbd2"><p class="cn">Tak og takrenner</p><h3>Hva løv i takrennen faktisk koster deg</h3><p>Planlagt: publiseres før høstsesongen.</p></div>
-<div class="vv tbd2"><p class="cn">Vinter og sikring</p><h3>Istapper: styrets ansvar — og hva det betyr i praksis</h3><p>Planlagt: publiseres før vintersesongen.</p></div>
+<a class="vv" href="/verdt-a-vite/takrenner"><p class="cn">Tak og takrenner</p><h3>Hva løv i takrennen faktisk koster deg</h3><p>Overvann på fasaden, fukt i grunnmuren og is om vinteren — og hvorfor oktober er fristen.</p><span class="la">Les artikkelen <span aria-hidden="true">→</span></span></a>
+<a class="vv" href="/verdt-a-vite/istapper"><p class="cn">Vinter og sikring</p><h3>Istapper: styrets ansvar — og hva det betyr i praksis</h3><p>Hva politivedtektene krever, hvorfor varselskilt ikke er nok, og hva en beredskapsavtale bør inneholde.</p><span class="la">Les artikkelen <span aria-hidden="true">→</span></span></a>
 </div></div></section>
 
 <section id="befaring"><div class="wrap">
@@ -363,7 +368,7 @@ footer{background:var(--ink);color:#98A2B0;padding:64px 0 40px;font-size:14.5px}
 
 <section class="kb"><div class="wrap kbw">
 <div><p class="kbk">Kontakt oss i dag</p><a class="kbtel" href="tel:+4792979177">929 79 177</a></div>
-<div class="kbact"><a class="btn bs1" href="#befaring">Bestill gratis befaring</a><a class="btn bg1" href="mailto:post@fasadetjenester.no">Send e-post</a></div>
+<div class="kbact"><a class="btn bs1" href="#befaring">Bestill gratis befaring</a><a class="btn bg1" href="mailto:terje@fasadetjenester.no">Send e-post</a></div>
 </div></section>
 
 <footer><div class="wrap"><div class="ft">
@@ -371,7 +376,7 @@ footer{background:var(--ink);color:#98A2B0;padding:64px 0 40px;font-size:14.5px}
 <p style="margin-top:14px;max-width:30ch">Fasadetjenester satt i system. Alt utvendig. Én leverandør.</p></div>
 <div><h4>Tjenester</h4><ul><li><a href="#tjenester">Fasadevask</a></li><li><a href="#tjenester">Håndverk</a></li><li><a href="#tjenester">Vinter og sikring</a></li><li><a href="#tjenester">Løpende renhold</a></li></ul></div>
 <div><h4>Selskapet</h4><ul><li><a href="#om">Om oss</a></li><li><a href="#arshjul">Årshjulet</a></li><li><a href="#resultater">Før og etter</a></li><li><a href="#omrader">Områder</a></li><li><a href="/verdt-a-vite">Verdt å vite</a></li></ul></div>
-<div><h4>Kontakt</h4><ul><li><a href="tel:+4792979177">929 79 177</a></li><li>Mikalsrud 7A, 2069 Jessheim</li><li><a href="#befaring">Gratis befaring</a></li><li><a href="mailto:post@fasadetjenester.no">post@fasadetjenester.no</a></li><li>Org.nr. 934 907 035</li></ul></div>
+<div><h4>Kontakt</h4><ul><li><a href="tel:+4792979177">929 79 177</a></li><li>Mikalsrud 7A, 2069 Jessheim</li><li><a href="#befaring">Gratis befaring</a></li><li><a href="mailto:terje@fasadetjenester.no">terje@fasadetjenester.no</a></li><li>Org.nr. 934 907 035</li></ul></div>
 </div><div class="fb"><span>© 2026 Fasadetjenester AS</span><a href="https://moonlandingsite.no" style="color:inherit;text-decoration:none" onmouseover="this.style.color='var(--hiviz)'" onmouseout="this.style.color='inherit'">Nettside av Moonlanding &rarr;</a></div></div></footer>`}}/>
     <Script src="https://embed.typeform.com/next/embed.js" strategy="afterInteractive"/>
     <Script src="/js/index.js" strategy="afterInteractive"/>

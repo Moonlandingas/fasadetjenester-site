@@ -12,6 +12,7 @@ export const metadata = {
     siteName: 'Fasadetjenester AS',
     locale: 'nb_NO',
     type: 'website',
+    images: [{ url: '/img/og.jpg', width: 1200, height: 630, alt: 'Fasadetjenester AS — fasadevask og utvendig vedlikehold' }],
   },
 }
 export default function Page() {
@@ -72,7 +73,7 @@ footer{background:var(--ink);color:#98A2B0;padding:34px 0;margin-top:70px;font-s
 "publisher":{"@id":"#org"},
 "mainEntityOfPage":"https://fasadetjenester.no/verdt-a-vite/fasadevask/"},
 {"@type":"LocalBusiness","@id":"#org","name":"Fasadetjenester AS",
-"telephone":"+47 929 79 177","email":"post@fasadetjenester.no",
+"telephone":"+47 929 79 177","email":"terje@fasadetjenester.no",
 "address":{"@type":"PostalAddress","streetAddress":"Mikalsrud 7A","postalCode":"2069","addressLocality":"Jessheim","addressCountry":"NO"},
 "areaServed":["Oslo","Akershus","Østlandet"],"slogan":"Alt utvendig. Én leverandør."},
 {"@type":"Service","name":"Fasadevask","provider":{"@id":"#org"},
@@ -152,6 +153,6 @@ footer{background:var(--ink);color:#98A2B0;padding:34px 0;margin-top:70px;font-s
 <a class="btn" href="/#befaring">Bestill gratis befaring</a></div>
 </div>
 
-<footer><div>© 2026 Fasadetjenester AS · Org.nr. 934 907 035 · 929 79 177 · post@fasadetjenester.no · <a href="https://moonlandingsite.no" style="color:inherit">Nettside av Moonlanding</a></div></footer>`}}/>
+<footer><div>© 2026 Fasadetjenester AS · Org.nr. 934 907 035 · 929 79 177 · terje@fasadetjenester.no · <a href="https://moonlandingsite.no" style="color:inherit">Nettside av Moonlanding</a></div></footer>`}}/>
   </>)
 }

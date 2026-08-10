@@ -3,6 +3,10 @@ import { BASE } from '../lib/site'
 
 export const metadata = {
   metadataBase: new URL(BASE),
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/img/og.jpg'],
+  },
 }
 
 const orgLd = JSON.stringify({
@@ -12,7 +16,7 @@ const orgLd = JSON.stringify({
   name: 'Fasadetjenester AS',
   slogan: 'Alt utvendig. Én leverandør.',
   telephone: '+47 929 79 177',
-  email: 'post@fasadetjenester.no',
+  email: 'terje@fasadetjenester.no',
   url: BASE + '/',
   address: { '@type': 'PostalAddress', streetAddress: 'Mikalsrud 7A', postalCode: '2069', addressLocality: 'Jessheim', addressCountry: 'NO' },
   areaServed: ['Oslo', 'Akershus', 'Østlandet', 'Sørøst-Norge'],
@@ -28,6 +32,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: orgLd }} />
         {children}
         <Script id="gtm" src="/js/gtm.js" strategy="afterInteractive" />
+        <Script id="matomo" src="/js/matomo.js" strategy="afterInteractive" />
         <Script id="consent-banner" src="/js/consent.js" strategy="afterInteractive" />
       </body>
     </html>

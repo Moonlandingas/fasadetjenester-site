@@ -11,6 +11,7 @@ export const metadata = {
     siteName: 'Fasadetjenester AS',
     locale: 'nb_NO',
     type: 'website',
+    images: [{ url: '/img/og.jpg', width: 1200, height: 630, alt: 'Fasadetjenester AS — fasadevask og utvendig vedlikehold' }],
   },
 }
 export default function Page() {
