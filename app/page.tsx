@@ -76,7 +76,10 @@ header.st .lg em{color:var(--navy)}header.st .bg1{border-color:var(--ink);color:
 .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--hiviz);margin-right:9px;vertical-align:1px}
 .nb a{color:var(--hiviz);text-decoration:none;font-weight:600;white-space:nowrap}
 .strip{background:var(--navy);color:#CBD9EA;padding:18px 0;font-size:15.5px}
-.strip ul{display:flex;flex-wrap:wrap;gap:8px 34px;list-style:none;margin:0;padding:0;justify-content:center}
+.strip ul{display:flex;flex-wrap:wrap;gap:10px 34px;list-style:none;margin:0;padding:0;justify-content:center}
+.strip li{white-space:nowrap}
+@media(max-width:1160px){.strip{font-size:14.5px}.strip ul{gap:10px 24px}}
+@media(max-width:1024px){.strip{font-size:14px}.strip ul{gap:10px 20px}}
 .wg{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;margin-top:52px}
 .wheel{width:100%;max-width:470px;margin:0 auto;overflow:visible}
 .rim{fill:none;stroke:rgba(255,255,255,.1)}.seg{cursor:pointer}
@@ -240,7 +243,7 @@ footer{background:var(--ink);color:#98A2B0;padding:64px 0 40px;font-size:14.5px}
 </div>
 
 <div class="hero"><div class="hbg">
-<video autoplay muted loop playsinline preload="auto" poster="/img/hero.webp" id="heroVideo" src="https://fasadetjenester.no/wp-content/uploads/2025/12/Banner-video.mp4"></video>
+<video autoplay muted loop playsinline preload="auto" poster="/img/hero-video-poster.webp" id="heroVideo" src="/banner.mp4"></video>
 <img src="/img/hero.webp" alt="Fasadetjenester AS — banner på stillas i Oslo" id="heroFallback"></div>
 <div class="hin"><div class="wrap">
 <p class="ey" style="color:var(--hiviz)">Gratis befaring — hele året</p>
@@ -254,7 +257,7 @@ footer{background:var(--ink);color:#98A2B0;padding:64px 0 40px;font-size:14.5px}
 
 <div class="strip"><div class="wrap"><ul>
 <li>Næringsbygg, sameier og borettslag</li><li>Offentlig godkjent renholdsbedrift</li>
-<li>Hele Sørøst-Norge, inkludert Gjøvikregionen</li><li>Miljøfyrtårn-sertifisert</li><li>Gratis befaring</li></ul></div></div>
+<li>Hele Sørøst-Norge, inkludert Gjøvikregionen</li><li>Miljøfyrtårn-sertifisert</li></ul></div></div>
 
 <section class="kb"><div class="wrap kbw">
 <div><p class="kbk">Kontakt oss i dag</p><a class="kbtel" href="tel:+4792979177">929 79 177</a></div>
