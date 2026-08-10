@@ -10,6 +10,7 @@ document.getElementById('ftcb-ok').addEventListener('click',function(){
 window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
 gtag('consent','update',{ad_storage:'granted',ad_user_data:'granted',ad_personalization:'granted',analytics_storage:'granted'});
 window._paq=window._paq||[];window._paq.push(['setCookieConsentGiven']);
+if(window.ftLoadMetaPixel)window.ftLoadMetaPixel();
 done('all');});
 document.getElementById('ftcb-no').addEventListener('click',function(){done('necessary');});
 })();

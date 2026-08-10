@@ -7,6 +7,11 @@ export const metadata = {
     card: 'summary_large_image',
     images: ['/img/og.jpg'],
   },
+  verification: {
+    other: {
+      'facebook-domain-verification': '2a0xaz9ddak6qp1ij3d1hrmeya1n2y',
+    },
+  },
 }
 
 const orgLd = JSON.stringify({
@@ -33,6 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {children}
         <Script id="gtm" src="/js/gtm.js" strategy="afterInteractive" />
         <Script id="matomo" src="/js/matomo.js" strategy="afterInteractive" />
+        <Script id="meta-pixel" src="/js/meta-pixel.js" strategy="afterInteractive" />
         <Script id="consent-banner" src="/js/consent.js" strategy="afterInteractive" />
       </body>
     </html>
