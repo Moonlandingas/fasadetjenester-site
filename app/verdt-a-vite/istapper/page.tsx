@@ -57,7 +57,6 @@ th{font-family:var(--d);font-size:13px;letter-spacing:.08em;text-transform:upper
 .forf b{font-family:var(--d);font-size:17px;color:var(--ink);display:block;margin-bottom:4px}
 .cta{background:var(--ink);color:#fff;border-radius:20px;padding:40px;margin:54px 0;text-align:center}
 .cta h2{margin:0 0 10px}.cta p{color:rgba(255,255,255,.75);margin:0 0 22px}
-.utkast{background:#FFF4D6;border:1px solid #E8D48A;border-radius:8px;padding:14px 18px;font-size:14px;color:#6b5a1e;margin:26px 0}
 .jur{border:1px solid var(--puss2);border-radius:14px;padding:18px 22px;margin:30px 0;font-size:14.5px;color:var(--steind)}
 figure{margin:34px 0}figcaption{font-size:13.5px;color:var(--steind);margin-top:8px}
 .les{background:var(--puss);border-radius:14px;padding:20px 24px;margin:34px 0;font-size:15.5px}
@@ -93,7 +92,6 @@ footer{background:var(--ink);color:#98A2B0;padding:34px 0;margin-top:70px;font-s
 <div class="wrap">
 <p class="crumb"><a href="/">Forside</a> / <a href="/verdt-a-vite">Verdt å vite</a> / Istapper og takras</p>
 
-<div class="utkast"><b>UTKAST til gjennomlesing hos Terje.</b> Artikkelen gjengir krav i politivedtekt og alminnelige ansvarsregler. Ordlyden i politivedtektene varierer mellom kommuner, og fremstillingen bør kvalitetssikres — helst av forretningsfører eller advokat — før publisering. (Jf. retningslinjene for AI-innhold i briefen, pkt. 9.2 og 9.4.)</div>
 
 <p class="ey">Verdt å vite · Vinter og sikring</p>
 <h1>Istapper: styrets ansvar — og hva det betyr i praksis</h1>

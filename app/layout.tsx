@@ -1,5 +1,6 @@
 import Script from 'next/script'
-import { BASE } from '../lib/site'
+import { BASE, TLF, EPOST, KOMMUNER, PRISER_GODKJENT } from '../lib/site'
+import { KVM_MIN, KVM_MAKS, VALUTA } from '../lib/priser'
 
 export const metadata = {
   metadataBase: new URL(BASE),
@@ -14,18 +15,65 @@ export const metadata = {
   },
 }
 
+const TJENESTER = [
+  'Fasadevask', 'Softwash', 'Høytrykksvask', 'Vindusvask', 'Grafittifjerning',
+  'Garasjevask', 'Takvask', 'Takrennerens', 'Takreparasjon', 'Murreparasjon',
+  'Betongrehabilitering', 'Fasademaling', 'Blikkenslagerarbeid', 'Beslag',
+  'Istappfjerning', 'Snørydding av tak', 'Salting og strøing', 'Daglig renhold',
+]
+
 const orgLd = JSON.stringify({
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   '@id': BASE + '/#org',
   name: 'Fasadetjenester AS',
+  legalName: 'Fasadetjenester AS',
   slogan: 'Alt utvendig. Én leverandør.',
-  telephone: '+47 929 79 177',
-  email: 'terje@fasadetjenester.no',
+  description: 'Fasadevask, grafittifjerning, takrennerens, vintersikring og håndverk for borettslag, sameier og næringsbygg i Oslo, Akershus og Sørøst-Norge.',
+  telephone: TLF,
+  email: EPOST,
   url: BASE + '/',
-  address: { '@type': 'PostalAddress', streetAddress: 'Mikalsrud 7A', postalCode: '2069', addressLocality: 'Jessheim', addressCountry: 'NO' },
-  areaServed: ['Oslo', 'Akershus', 'Østlandet', 'Sørøst-Norge'],
-  knowsAbout: ['Fasadevask', 'Grafittifjerning', 'Takrennerens', 'Istappfjerning', 'Blikkenslagerarbeid', 'Murreparasjon'],
+  logo: BASE + '/img/og.jpg',
+  image: BASE + '/img/og.jpg',
+  vatID: 'NO934907035MVA',
+  taxID: '934907035',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Mikalsrud 7A',
+    postalCode: '2069',
+    addressLocality: 'Jessheim',
+    addressRegion: 'Akershus',
+    addressCountry: 'NO',
+  },
+  areaServed: KOMMUNER.map(n => ({ '@type': 'City', name: n })),
+  knowsAbout: TJENESTER,
+  ...(PRISER_GODKJENT ? { priceRange: KVM_MIN + '–' + KVM_MAKS + ' ' + VALUTA + ' per m²' } : { priceRange: '$$' }),
+  currenciesAccepted: VALUTA,
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '07:00',
+      closes: '16:00',
+    },
+  ],
+  contactPoint: [{
+    '@type': 'ContactPoint',
+    telephone: TLF,
+    contactType: 'customer service',
+    areaServed: 'NO',
+    availableLanguage: ['Norwegian', 'nb'],
+  }],
+  founder: { '@type': 'Person', name: 'Terje Gulliksen', jobTitle: 'Daglig leder' },
+  employee: [{ '@type': 'Person', name: 'Terje Gulliksen', jobTitle: 'Daglig leder' }],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Utvendig vedlikehold',
+    itemListElement: TJENESTER.map(t => ({
+      '@type': 'Offer',
+      itemOffered: { '@type': 'Service', name: t },
+    })),
+  },
 })
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

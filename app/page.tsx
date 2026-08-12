@@ -1,5 +1,6 @@
 import Script from 'next/script'
-import { LIVE } from '../lib/site'
+import { LIVE, PRISER_GODKJENT, TLF, TLF_VIS, TYPEFORM_URL, SKJEMA_ENDPOINT } from '../lib/site'
+import { SKJEMA_CSS } from '../lib/css'
 export const metadata = {
   title: "Fasadevask og utvendig vedlikehold | Fasadetjenester AS",
   description: "Fasadevask, grafittifjerning, takrennerens, vintersikring og h\u00e5ndverk for borettslag, sameier og n\u00e6ringsbygg i Oslo, Akershus og hele S\u00f8r\u00f8st-Norge. Gratis befaring \u2014 \u00e9n leverand\u00f8r, hele \u00e5ret.",
@@ -198,7 +199,7 @@ footer{background:var(--ink);color:#98A2B0;padding:64px 0 40px;font-size:14.5px}
 .st1{border-right:0;border-bottom:1px solid var(--puss2);padding:26px 0}.st1:not(:first-child){padding-left:0}.st1:last-child{border-bottom:0}
 .nb{grid-template-columns:1fr;gap:12px}.ty{position:static}.ft{grid-template-columns:1fr 1fr}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01ms!important}html{scroll-behavior:auto}.rv{opacity:1;transform:none}}
-`}}/>
+` + SKJEMA_CSS}}/>
     <div dangerouslySetInnerHTML={{__html: `
 
 
@@ -207,7 +208,9 @@ footer{background:var(--ink);color:#98A2B0;padding:64px 0 40px;font-size:14.5px}
 <nav class="nv">
 <div class="ni"><a href="#tjenester">Tjenester <span aria-hidden="true">&#9662;</span></a>
 <div class="sub"><div class="subin">
-<a href="#fasadevask-rengjoring">Fasadevask og utvendig rengjøring</a>
+<a href="/fasadevask">Fasadevask${PRISER_GODKJENT ? ' — metode og pris' : ' — metode og intervall'}</a>
+${PRISER_GODKJENT ? '<a href="/fasadevask/pris">Hva koster fasadevask?</a>' : ''}
+<a href="#fasadevask-rengjoring">Utvendig rengjøring</a>
 <a href="#handverk">Håndverk — mur, tak, maling</a>
 <a href="#vinter-sikring">Vinter og sikring</a>
 <a href="#renhold">Løpende renhold</a>
@@ -230,7 +233,9 @@ footer{background:var(--ink);color:#98A2B0;padding:64px 0 40px;font-size:14.5px}
 <a class="btn bs1" href="#befaring"><span class="cl1">Gratis befaring</span><span class="cs1">Befaring</span></a></div></header>
 <div class="mm" id="mm">
 <h5>Tjenester</h5>
-<a href="#fasadevask-rengjoring">Fasadevask og utvendig rengjøring</a>
+<a href="/fasadevask">Fasadevask</a>
+${PRISER_GODKJENT ? '<a href="/fasadevask/pris">Hva koster fasadevask?</a>' : ''}
+<a href="#fasadevask-rengjoring">Utvendig rengjøring</a>
 <a href="#handverk">Håndverk — mur, tak, maling</a>
 <a href="#vinter-sikring">Vinter og sikring</a>
 <a href="#renhold">Løpende renhold</a>
@@ -294,7 +299,7 @@ footer{background:var(--ink);color:#98A2B0;padding:64px 0 40px;font-size:14.5px}
 <section class="pa" id="tjenester"><div class="wrap">
 <div class="nar rv"><p class="ey">Tjenester</p><h2 class="h2">Fire områder. Én leverandør.</h2>
 <p style="font-size:18.5px;color:var(--steind);margin-top:18px">Hvert område får sin egen side med undertjenester, priseksempler og bilder fra faktiske jobber — slik at et søk på «lekkasje tak» eller «grafittifjerning Oslo» lander riktig med én gang.</p></div>
-<div class="cats rv"><article class="cat" id="fasadevask-rengjoring"><div class="cm"><img src="/img/c_fasade.webp" alt="Fasadevask og utvendig rengjøring" loading="lazy"></div><div class="cb"><p class="cn">01</p><h3 class="ct">Fasadevask og utvendig rengjøring</h3><p class="cl">Hele det utvendige, fra rekkverk til gesims. Softwash der overflaten er sårbar, høytrykk der den tåler det.</p><ul class="cs"><li>Fasadevask</li><li>Vindusvask</li><li>Grafittifjerning</li><li>Garasjevask</li><li>Softwash</li><li>Høytrykksvask</li><li>Algevask og mosevask</li><li>Utvendig rengjøring av næringsbygg</li></ul><a class="la" href="#befaring">Be om pris <span aria-hidden="true">→</span></a></div></article><article class="cat" id="handverk"><div class="cm"><img src="/img/c_handverk.webp" alt="Håndverk" loading="lazy"></div><div class="cb"><p class="cn">02</p><h3 class="ct">Håndverk</h3><p class="cl">Mur, betong, tak, beslag og snekker. Ser vi skadet puss eller rusten armering under befaringen, kan vi ta det selv — uten å hente inn noen andre.</p>
+<div class="cats rv"><article class="cat" id="fasadevask-rengjoring"><div class="cm"><img src="/img/c_fasade.webp" alt="Fasadevask og utvendig rengjøring" loading="lazy"></div><div class="cb"><p class="cn">01</p><h3 class="ct">Fasadevask og utvendig rengjøring</h3><p class="cl">Hele det utvendige, fra rekkverk til gesims. Softwash der overflaten er sårbar, høytrykk der den tåler det.</p><ul class="cs"><li>Fasadevask</li><li>Vindusvask</li><li>Grafittifjerning</li><li>Garasjevask</li><li>Softwash</li><li>Høytrykksvask</li><li>Algevask og mosevask</li><li>Utvendig rengjøring av næringsbygg</li></ul><a class="la" href="/fasadevask">${PRISER_GODKJENT ? 'Se priser på fasadevask' : 'Mer om fasadevask'} <span aria-hidden="true">→</span></a></div></article><article class="cat" id="handverk"><div class="cm"><img src="/img/c_handverk.webp" alt="Håndverk" loading="lazy"></div><div class="cb"><p class="cn">02</p><h3 class="ct">Håndverk</h3><p class="cl">Mur, betong, tak, beslag og snekker. Ser vi skadet puss eller rusten armering under befaringen, kan vi ta det selv — uten å hente inn noen andre.</p>
 <p class="cl" style="margin-top:-6px">Tak- og metallarbeid dekker både blikkenslager- og kobberslagerfaget: beslag, pipebeslag, takrenner og nedløp, taktekking og fasadeelementer i stål, sink og aluminium — og de tynnere kobberarbeidene på eldre bygg, fra takdetaljer til tårnspir. Gammel metalltradisjon møter moderne byggteknikk, og på bygårder er det ofte nettopp dette arbeidet som avgjør om taket holder tett i tiår.</p><ul class="cs"><li>Murreparasjon og betongrehabilitering</li><li>Fasademaling</li><li>Taktekking og takreparasjon</li><li>Lekkasje i tak</li><li>Blikkenslagerarbeid</li><li>Kobberslagerarbeid</li><li>Beslag og pipebeslag</li><li>Snekkerarbeid</li><li>Levegg</li><li>Tilstandsrapport</li></ul><a class="la" href="#befaring">Be om pris <span aria-hidden="true">→</span></a></div></article><article class="cat" id="vinter-sikring"><div class="cm"><img src="/img/c_vinter.webp" alt="Vinter og sikring" loading="lazy"></div><div class="cb"><p class="cn">03</p><h3 class="ct">Vinter og sikring</h3><p class="cl">Fra første frost til siste tine. Med fast avtale er vi der før dere rekker å ringe.</p><ul class="cs"><li>Istappfjerning</li><li>Snørydding av tak</li><li>Salting og strøing</li><li>Issikring</li><li>Vintervedlikehold</li><li>Rasfare- og istappskilt</li></ul><a class="la" href="#befaring">Be om pris <span aria-hidden="true">→</span></a></div></article><article class="cat" id="renhold"><div class="cm"><img src="/img/c_renhold.webp" alt="Løpende renhold" loading="lazy"></div><div class="cb"><p class="cn">04</p><h3 class="ct">Løpende renhold</h3><p class="cl">Daglig og fast renhold av nærings- og kontorbygg. Offentlig godkjent renholdsbedrift — og samme kontaktperson som for alt det andre.</p><ul class="cs"><li>Daglig renhold</li><li>Kontorrenhold</li><li>Renholdsavtale</li><li>Trappevask</li></ul><a class="la" href="#befaring">Be om pris <span aria-hidden="true">→</span></a></div></article></div></div></section>
 
 <section class="dk" id="resultater"><div class="wrap">
@@ -358,9 +363,25 @@ footer{background:var(--ink);color:#98A2B0;padding:64px 0 40px;font-size:14.5px}
 <section id="befaring"><div class="wrap">
 <div class="nar rv"><p class="ey">Gratis befaring</p><h2 class="h2">Fortell hvor bygget står, så tar vi resten.</h2>
 <p style="font-size:18.5px;color:var(--steind);margin-top:18px">Du trenger ikke vite hva tjenesten heter. Beskriv problemet, så finner vi ut av det på befaringen — og ser samtidig etter alt annet som bør tas mens vi er der. Representerer du et borettslag eller sameie, kan én befaring dekke hele styrets vedlikeholdsliste.</p></div>
-<div class="nar" style="margin-top:34px">
-<a class="btn bs1" id="tfOpen" href="https://416jbe00upv.typeform.com/to/vKqv5RX5" style="font-size:17px;padding:18px 34px">Bestill gratis befaring</a>
-<p style="margin-top:16px;font-size:14px;color:var(--steind)">Åpnes som kort skjema — under to minutter. Uforpliktende, og du velger selv hva som eventuelt gjøres.</p>
+<div class="sk rv" style="margin-top:34px">
+<h3 style="font-size:24px;margin:0 0 8px">Fire felt, og vi ringer deg</h3>
+<p class="skl">Har du huket av tjenester over, følger de automatisk med.</p>
+<form class="skjema" data-endpoint="${SKJEMA_ENDPOINT}" data-typeform="${TYPEFORM_URL}" data-kilde="forside" novalidate>
+<div class="skg">
+<div class="skf"><label for="h-navn">Navn</label><input id="h-navn" name="navn" type="text" autocomplete="name" placeholder="Ola Nordmann" required><span class="err">Fyll inn navn.</span></div>
+<div class="skf"><label for="h-tlf">Telefon</label><input id="h-tlf" name="telefon" type="tel" inputmode="tel" autocomplete="tel" placeholder="912 34 567" required><span class="err">Åtte siffer, takk.</span></div>
+<div class="skf"><label for="h-adr">Adresse eller postnummer</label><input id="h-adr" name="adresse" type="text" autocomplete="street-address" placeholder="Storgata 1, 0155 Oslo"></div>
+<div class="skf"><label for="h-type">Hva slags bygg</label><select id="h-type" name="byggtype">
+<option value="">Velg …</option><option>Borettslag</option><option>Sameie</option><option>Næringsbygg</option><option>Bygård</option><option>Enebolig eller rekkehus</option><option>Annet</option></select></div>
+<div class="skf fu"><label for="h-melding">Hva gjelder det?</label><textarea id="h-melding" name="melding" placeholder="Beskriv gjerne problemet — du trenger ikke vite hva tjenesten heter."></textarea></div>
+<input class="hp" type="text" name="firma" tabindex="-1" autocomplete="off" aria-hidden="true">
+<input type="hidden" name="tjenester" value="">
+<div class="skb"><button class="btn bs1" type="submit">Bestill gratis befaring</button>
+<small>Uforpliktende. Vi bruker opplysningene kun til å svare deg — <a href="/personvern" style="color:var(--hiviz)">personvern</a>.</small></div>
+</div>
+</form>
+<div class="skok"></div>
+<p style="margin:22px 0 0;font-size:15px;color:rgba(255,255,255,.7)">Heller ringe? <a href="tel:${TLF}" style="color:var(--hiviz);font-weight:600">${TLF_VIS}</a>. Eller ta <a id="tfOpen" href="${TYPEFORM_URL}" style="color:var(--hiviz);font-weight:600">det lengre skjemaet</a> hvis du vil beskrive mer.</p>
 </div></div></section>
 
 
@@ -374,11 +395,12 @@ footer{background:var(--ink);color:#98A2B0;padding:64px 0 40px;font-size:14.5px}
 <footer><div class="wrap"><div class="ft">
 <div><a class="lg" href="#" style="color:#fff">Fasade<em>tjenester</em></a>
 <p style="margin-top:14px;max-width:30ch">Fasadetjenester satt i system. Alt utvendig. Én leverandør.</p></div>
-<div><h4>Tjenester</h4><ul><li><a href="#tjenester">Fasadevask</a></li><li><a href="#tjenester">Håndverk</a></li><li><a href="#tjenester">Vinter og sikring</a></li><li><a href="#tjenester">Løpende renhold</a></li></ul></div>
+<div><h4>Tjenester</h4><ul><li><a href="/fasadevask">Fasadevask</a></li>${PRISER_GODKJENT ? '<li><a href="/fasadevask/pris">Fasadevask pris</a></li>' : ''}<li><a href="#tjenester">Håndverk</a></li><li><a href="#tjenester">Vinter og sikring</a></li><li><a href="#tjenester">Løpende renhold</a></li></ul></div>
 <div><h4>Selskapet</h4><ul><li><a href="#om">Om oss</a></li><li><a href="#arshjul">Årshjulet</a></li><li><a href="#resultater">Før og etter</a></li><li><a href="#omrader">Områder</a></li><li><a href="/verdt-a-vite">Verdt å vite</a></li></ul></div>
 <div><h4>Kontakt</h4><ul><li><a href="tel:+4792979177">929 79 177</a></li><li>Mikalsrud 7A, 2069 Jessheim</li><li><a href="#befaring">Gratis befaring</a></li><li><a href="mailto:terje@fasadetjenester.no">terje@fasadetjenester.no</a></li><li>Org.nr. 934 907 035</li></ul></div>
 </div><div class="fb"><span>© 2026 Fasadetjenester AS</span><a href="https://moonlandingsite.no" style="color:inherit;text-decoration:none" onmouseover="this.style.color='var(--hiviz)'" onmouseout="this.style.color='inherit'">Nettside av Moonlanding &rarr;</a></div></div></footer>`}}/>
     <Script src="https://embed.typeform.com/next/embed.js" strategy="afterInteractive"/>
     <Script src="/js/index.js" strategy="afterInteractive"/>
+    <Script src="/js/skjema.js" strategy="afterInteractive"/>
   </>)
 }

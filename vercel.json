@@ -3,15 +3,25 @@
   "trailingSlash": false,
   "redirects": [
     { "source": "/kontakt-oss", "destination": "/#befaring", "permanent": false },
-    { "source": "/fasadevask", "destination": "/verdt-a-vite/fasadevask", "permanent": true },
-    { "source": "/takrennerens", "destination": "/#tjenester", "permanent": true },
-    { "source": "/garasjevask", "destination": "/#tjenester", "permanent": true },
-    { "source": "/grafittifjerning", "destination": "/#tjenester", "permanent": true },
-    { "source": "/vindusvask", "destination": "/#tjenester", "permanent": true },
-    { "source": "/vinduspuss", "destination": "/#tjenester", "permanent": true },
-    { "source": "/istappfjerning", "destination": "/#tjenester", "permanent": true },
+
+    { "source": "/takrennerens", "destination": "/verdt-a-vite/takrenner", "permanent": true },
+    { "source": "/istappfjerning", "destination": "/verdt-a-vite/istapper", "permanent": true },
+
+    { "source": "/handverkstjenester", "destination": "/#handverk", "permanent": true },
+    { "source": "/handverk", "destination": "/#handverk", "permanent": true },
+    { "source": "/garasjevask", "destination": "/#fasadevask-rengjoring", "permanent": true },
+    { "source": "/grafittifjerning", "destination": "/#fasadevask-rengjoring", "permanent": true },
+    { "source": "/vindusvask", "destination": "/#fasadevask-rengjoring", "permanent": true },
+    { "source": "/vinduspuss", "destination": "/#fasadevask-rengjoring", "permanent": true },
+    { "source": "/renhold", "destination": "/#renhold", "permanent": true },
+    { "source": "/vinter", "destination": "/#vinter-sikring", "permanent": true },
+
+    { "source": "/fasadevask-pris", "destination": "/fasadevask/pris", "permanent": true },
+    { "source": "/hva-koster-fasadevask", "destination": "/fasadevask/pris", "permanent": true },
+    { "source": "/priser", "destination": "/fasadevask/pris", "permanent": true },
+
     { "source": "/verd-a-vite", "destination": "/verdt-a-vite", "permanent": true },
-    { "source": "/profesjonell-graffitifjerning-beskytt-eiendommens-image", "destination": "/#tjenester", "permanent": true },
+    { "source": "/profesjonell-graffitifjerning-beskytt-eiendommens-image", "destination": "/#fasadevask-rengjoring", "permanent": true },
     { "source": "/sikkert-og-effektivt-utvendig-vedlikehold-for-alle-bygningstyper", "destination": "/verdt-a-vite", "permanent": true },
     { "source": "/hvorfor-regelmessig-fasaderengjoring-er-viktig-for-langsiktig-bygningspleie", "destination": "/verdt-a-vite/fasadevask", "permanent": true },
     { "source": "/norgespris-varmepumpe-sant", "destination": "/verdt-a-vite", "permanent": true },
