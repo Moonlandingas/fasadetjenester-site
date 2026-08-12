@@ -1,12 +1,9 @@
 import Script from 'next/script'
-import { LIVE, BASE, PRISER_GODKJENT, TLF, TLF_VIS, EPOST, TYPEFORM_URL, SKJEMA_ENDPOINT, SKJEMA_KOPI, KOMMUNER } from '../../lib/site'
-import { KVM_PRISER, RIGG, EKSEMPLER, KVM_MIN, KVM_MAKS, VALUTA } from '../../lib/priser'
+import { LIVE, BASE, TLF, TLF_VIS, EPOST, TYPEFORM_URL, KOMMUNER } from '../../lib/site'
 import { SIDE_CSS, SKJEMA_CSS } from '../../lib/css'
 
 const TITTEL = 'Fasadevask for borettslag, sameier og næringsbygg | Fasadetjenester AS'
-const BESKR = PRISER_GODKJENT
-  ? 'Fasadevask koster typisk ' + KVM_MIN + '–' + KVM_MAKS + ' kr per m². Se pris per bygningstype, softwash vs. høytrykk, og hvor ofte fasaden bør vaskes. Gratis befaring i Oslo og Akershus.'
-  : 'Fasadevask med softwash og høytrykk for borettslag, sameier og næringsbygg i Oslo og Akershus. Metode etter underlag, fast pris per tjeneste, gratis befaring.'
+const BESKR = 'Fasadevask med softwash og høytrykk for borettslag, sameier og næringsbygg i Oslo og Akershus. Metode etter underlag, fast pris per tjeneste, gratis befaring.'
 
 export const metadata = {
   title: TITTEL,
@@ -20,20 +17,10 @@ export const metadata = {
   },
 }
 
-const rader = (r: { hva: string; pris: string; note: string }[]) =>
-  r.map(x => '<tr><td><strong>' + x.hva + '</strong><br><span style="color:var(--steind);font-size:14.5px">' + x.note + '</span></td><td class="pr">' + x.pris + '</td></tr>').join('')
-
-const eksempler = EKSEMPLER.map(e =>
-  '<div class="exc"><h3>' + e.tittel + '</h3><ul>' +
-  e.fakta.map(f => '<li>' + f + '</li>').join('') +
-  '</ul><p class="sum">' + e.sum + '</p>' +
-  (e.per ? '<p class="per">' + e.per + '</p>' : '') + '</div>').join('')
 
 const FAQ = [
   ['Hva koster fasadevask?',
-    PRISER_GODKJENT
-      ? 'Fasadevask koster typisk ' + KVM_MIN + '–' + KVM_MAKS + ' kr per kvadratmeter fasadeflate. Et rekkehus på rundt 120 m² fasade ligger normalt på 4 000–7 500 kr, en boligblokk på 500 m² på 22 000–38 000 kr. Prisen drives av areal, høyde, tilkomst og hvor hardt fasaden er begrodd. Endelig pris settes etter en gratis befaring.'
-      : 'Prisen avhenger av areal, høyde, fasadetype og tilkomst. Et konkret tall får du etter en gratis befaring — da ser vi samtidig om det er andre ting på bygget som bør tas i samme runde. For borettslag og sameier prises jobben per bygg eller som del av en årsavtale.'],
+    'Prisen avhenger av areal, høyde, fasadetype og tilkomst. Et konkret tall får du etter en gratis befaring — da ser vi samtidig om det er andre ting på bygget som bør tas i samme runde. For borettslag og sameier prises jobben per bygg eller som del av en årsavtale.'],
   ['Hvor ofte bør en fasade vaskes?',
     'De fleste fasader bør vaskes hvert 1.–2. år. Nordvendte vegger, fasader nær trafikkert vei og pussede overflater i skygge gror raskere til og kan trenge årlig vask. Er grønsken synlig fra gata, har den allerede sittet en stund.'],
   ['Er høytrykksvask skadelig for fasaden?',
@@ -41,9 +28,7 @@ const FAQ = [
   ['Hva er softwash?',
     'Softwash er fasadevask med lavt trykk og et rengjøringsmiddel som løser opp alger, sopp og smuss kjemisk i stedet for mekanisk. Middelet får virke og skylles skånsomt av. Metoden dreper begroingen i roten, så fasaden holder seg ren lenger enn ved ren mekanisk vask.'],
   ['Hva koster fasadevask for et borettslag?',
-    PRISER_GODKJENT
-      ? 'Et borettslag med 20 enheter og rundt 600 m² fasade ligger normalt på 26 000–45 000 kr når fasadevask og takrenner tas i samme runde — omtrent 1 300–2 250 kr per enhet. Rigg- og kjørekostnaden deles mellom tjenestene, så samordning gir lavere pris per post.'
-      : 'Borettslag prises per bygg eller som del av en årsavtale. Tar vi fasade, takrenner og vinduer i samme runde, deles rigg- og kjørekostnaden mellom tjenestene, og styret får ett samlet tilbud med fast pris per tjeneste.'],
+    'Borettslag prises per bygg eller som del av en årsavtale. Tar vi fasade, takrenner og vinduer i samme runde, deles rigg- og kjørekostnaden mellom tjenestene, og styret får ett samlet tilbud med fast pris per tjeneste.'],
   ['Når på året bør fasaden vaskes?',
     'Vår og tidlig sommer er høysesong — da tar du vinterens tilsmussing før pollensesongen. Men fasadevask kan utføres store deler av året så lenge det er frostfritt. Skal fasaden males, må den uansett vaskes først.'],
   ['Må beboerne være hjemme når fasaden vaskes?',
@@ -64,21 +49,6 @@ const ld = JSON.stringify({
       provider: { '@id': BASE + '/#org' },
       areaServed: KOMMUNER.map(n => ({ '@type': 'City', name: n })),
       url: BASE + '/fasadevask',
-      ...(PRISER_GODKJENT ? {
-        offers: {
-          '@type': 'Offer',
-          priceCurrency: VALUTA,
-          priceSpecification: {
-            '@type': 'UnitPriceSpecification',
-            priceCurrency: VALUTA,
-            minPrice: KVM_MIN,
-            maxPrice: KVM_MAKS,
-            unitCode: 'MTK',
-            unitText: 'kvadratmeter fasadeflate',
-          },
-          availability: 'https://schema.org/InStock',
-        },
-      } : {}),
     },
     {
       '@type': 'FAQPage',
@@ -107,7 +77,7 @@ export default function Page() {
     <div dangerouslySetInnerHTML={{ __html: `
 
 <header><div class="hd"><a class="lg" href="/">Fasade<em>tjenester</em></a>
-<nav class="anv"><a href="/">Forside</a><a href="/fasadevask">Fasadevask</a>${PRISER_GODKJENT ? '<a href="/fasadevask/pris">Priser</a>' : ''}<a href="/#tjenester">Tjenester</a><a href="/verdt-a-vite">Verdt å vite</a></nav>
+<nav class="anv"><a href="/">Forside</a><a href="/fasadevask">Fasadevask</a><a href="/fasadevask/pris">Pris</a><a href="/#tjenester">Tjenester</a><a href="/verdt-a-vite">Verdt å vite</a></nav>
 <a class="btn" href="#befaring">Gratis befaring</a></div></header>
 
 <div class="wrap">
@@ -118,9 +88,7 @@ export default function Page() {
 
 <div class="meta"><span>Oslo, Akershus og hele Sørøst-Norge</span><span>·</span><span>Offentlig godkjent renholdsbedrift</span><span>·</span><span>Miljøfyrtårn-sertifisert</span></div>
 
-<div class="svar"><b>Kort svar:</b> ${PRISER_GODKJENT
-  ? 'Fasadevask koster typisk <strong>' + KVM_MIN + '–' + KVM_MAKS + ' kr per kvadratmeter</strong> fasadeflate. Et rekkehus på rundt 120 m² ligger normalt på 4 000–7 500 kr, en boligblokk på 500 m² på 22 000–38 000 kr, og et borettslag med 20 enheter på 26 000–45 000 kr — omtrent 1 300–2 250 kr per enhet. De fleste fasader bør vaskes hvert 1.–2. år. Metoden avgjøres av underlaget: softwash for puss, eldre tegl og malt kledning, høytrykk kun der overflaten tåler det.'
-  : 'De fleste fasader bør vaskes hvert 1.–2. år. Pussede og nordvendte fasader gror raskest til og kan trenge årlig vask. Metoden avgjøres av underlaget: softwash for puss, eldre tegl og malt kledning — høytrykk kun der overflaten tåler det. Prisen avhenger av areal, høyde og tilkomst, og settes etter en gratis befaring.'}</div>
+<div class="svar"><b>Kort svar:</b> De fleste fasader bør vaskes hvert 1.–2. år. Pussede og nordvendte fasader gror raskest til og kan trenge årlig vask. Metoden avgjøres av underlaget: softwash for puss, eldre tegl og malt kledning — høytrykk kun der overflaten tåler det. Prisen avhenger av areal, høyde og tilkomst, og settes etter en gratis befaring.</div>
 </div>
 
 <div class="wrap">
@@ -128,44 +96,22 @@ export default function Page() {
 <p class="ey" style="color:var(--hiviz)">Gratis befaring</p>
 <h2>Få pris på fasaden</h2>
 <p class="skl">Fyll ut, så ringer vi deg — som regel samme dag. Uforpliktende, og du velger selv om noe skal gjøres. Representerer du et styre, kan én befaring dekke hele vedlikeholdslista.</p>
-<form class="skjema" data-endpoint="${SKJEMA_ENDPOINT}" data-typeform="${TYPEFORM_URL}" data-kopi="${SKJEMA_KOPI}" data-kilde="fasadevask" novalidate>
-<div class="skg">
-<div class="skf"><label for="f-navn">Navn</label><input id="f-navn" name="navn" type="text" autocomplete="name" placeholder="Ola Nordmann" required><span class="err">Fyll inn navn.</span></div>
-<div class="skf"><label for="f-tlf">Telefon</label><input id="f-tlf" name="telefon" type="tel" inputmode="tel" autocomplete="tel" placeholder="912 34 567" required><span class="err">Åtte siffer, takk.</span></div>
-<div class="skf"><label for="f-adr">Adresse eller postnummer</label><input id="f-adr" name="adresse" type="text" autocomplete="street-address" placeholder="Storgata 1, 0155 Oslo"></div>
-<div class="skf"><label for="f-type">Hva slags bygg</label><select id="f-type" name="byggtype">
-<option value="">Velg …</option><option>Borettslag</option><option>Sameie</option><option>Næringsbygg</option><option>Bygård</option><option>Enebolig eller rekkehus</option><option>Annet</option></select></div>
-<div class="skf fu"><label for="f-melding">Hva gjelder det?</label><textarea id="f-melding" name="melding" placeholder="Beskriv gjerne problemet — du trenger ikke vite hva tjenesten heter."></textarea></div>
-<input class="hp" type="text" name="firma" tabindex="-1" autocomplete="off" aria-hidden="true">
-<input type="hidden" name="tjenester" value="">
-<div class="skb"><button class="btn" type="submit">Bestill gratis befaring</button>
-<small>Vi bruker opplysningene kun til å svare deg. <a href="/personvern" style="color:var(--hiviz)">Personvern</a></small></div>
-</div>
-</form>
-<div class="skok"></div>
+<ul class="skpunkt"><li>Under to minutter</li><li>Uforpliktende</li><li>Vi ringer deg samme dag</li></ul>
+<div class="skb"><a class="btn" href="${TYPEFORM_URL}" data-tf-open data-tf-kilde="fasadevask">Bestill gratis befaring</a>
+<a class="btn bl" href="tel:${TLF}">Ring ${TLF_VIS}</a></div>
 <p style="margin:20px 0 0;font-size:15px;color:rgba(255,255,255,.7)">Heller ringe? <a href="tel:${TLF}" style="color:var(--hiviz);font-weight:600">${TLF_VIS}</a> — vi har døgnvakt ved akutte behov.</p>
 </div>
 </div>
 
 <div class="wrap">
 
-${PRISER_GODKJENT ? `
-<h2 id="pris">Hva koster fasadevask?</h2>
-<p>Prisen settes per kvadratmeter fasadeflate, med tillegg for tilkomst. Under er nivåene vi normalt ligger på. Endelig pris får du etter en gratis befaring — da vet vi hva som faktisk står der.</p>
-<table><tr><th>Metode</th><th>Pris</th></tr>${rader(KVM_PRISER)}</table>
 
-<h3>Tilkomst og rigg</h3>
-<table><tr><th>Post</th><th>Pris</th></tr>${rader(RIGG)}</table>
-
-<h3>Tre regneeksempler</h3>
-<div class="ex">${eksempler}</div>
-<p style="font-size:15px;color:var(--steind);margin-top:18px">Alle beløp er eks. mva. og gjelder normal tilkomst. Priser oppdatert august 2026. <a href="/fasadevask/pris">Se full prisoversikt →</a></p>
-` : `
 <h2 id="pris">Hva koster fasadevask?</h2>
 <p>Ærlig svar: det finnes ingen seriøs kvadratmeterpris å oppgi uten å ha sett bygget. Prisen drives av fire ting:</p>
 <p><strong>Areal og høyde</strong> — antall etasjer avgjør om vi jobber fra bakken, lift eller stillas. <strong>Tilkomst</strong> — trange bakgårder og hindringer tar tid. <strong>Underlag og tilsmussing</strong> — softwash på hardt begrodd puss krever mer virketid enn en lett årlig vask. <strong>Samordning</strong> — tar vi vinduer, takrenner eller garasjen i samme runde, deler tjenestene rigg- og kjørekostnaden.</p>
 <p>Det siste punktet er grunnen til at borettslag ofte kommer godt ut hos oss: én befaring kan dekke hele styrets vedlikeholdsliste, og et samlet tilbud med fast pris per tjeneste gjør at styret selv velger hva som tas nå og hva som venter.</p>
-`}
+<p style="margin-top:22px"><a class="btn bl" href="/fasadevask/pris">Se hva fasadevask koster i markedet →</a></p>
+
 
 <h2>Softwash eller høytrykksvask? Underlaget bestemmer.</h2>
 <p>Det vanligste spørsmålet vi får på befaring — og det viktigste. Feil metode på feil underlag gjør mer skade enn skitten gjorde.</p>
@@ -212,6 +158,7 @@ ${FAQ.map(([q, a]) => '<details class="fq"><summary>' + q + '</summary><p>' + a 
 </div>
 
 <footer><div>© 2026 Fasadetjenester AS · Org.nr. 934 907 035 · <a href="tel:${TLF}">${TLF_VIS}</a> · <a href="mailto:${EPOST}">${EPOST}</a> · Mikalsrud 7A, 2069 Jessheim</div></footer>` }}/>
-    <Script src="/js/skjema.js" strategy="afterInteractive"/>
+    <Script src="https://embed.typeform.com/next/embed.js" strategy="afterInteractive"/>
+    <Script src="/js/tf.js" strategy="afterInteractive"/>
   </>)
 }

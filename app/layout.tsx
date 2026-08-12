@@ -1,6 +1,5 @@
 import Script from 'next/script'
-import { BASE, TLF, EPOST, KOMMUNER, PRISER_GODKJENT } from '../lib/site'
-import { KVM_MIN, KVM_MAKS, VALUTA } from '../lib/priser'
+import { BASE, TLF, EPOST, KOMMUNER } from '../lib/site'
 
 export const metadata = {
   metadataBase: new URL(BASE),
@@ -47,8 +46,8 @@ const orgLd = JSON.stringify({
   },
   areaServed: KOMMUNER.map(n => ({ '@type': 'City', name: n })),
   knowsAbout: TJENESTER,
-  ...(PRISER_GODKJENT ? { priceRange: KVM_MIN + '–' + KVM_MAKS + ' ' + VALUTA + ' per m²' } : { priceRange: '$$' }),
-  currenciesAccepted: VALUTA,
+  priceRange: '$$',
+  currenciesAccepted: 'NOK',
   openingHoursSpecification: [
     {
       '@type': 'OpeningHoursSpecification',

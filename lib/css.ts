@@ -64,27 +64,17 @@ footer{background:var(--ink);color:#98A2B0;padding:34px 0;margin-top:64px;font-s
 footer a{color:inherit}
 `
 
-// Skjemaets stil — brukes både på forsiden og på tjenestesidene.
+// CTA-blokk for befaring. Skjemaet selv ligger i Typeform.
 export const SKJEMA_CSS = `
-.sk{background:var(--ink);color:#fff;border-radius:20px;padding:34px;margin:40px 0}
-.sk h2,.sk h3{color:#fff;margin:0 0 8px}
-.sk .skl{color:rgba(255,255,255,.74);font-size:15.5px;margin:0 0 24px;max-width:52ch}
-.skg{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.skf{display:flex;flex-direction:column;gap:6px}.skf.fu{grid-column:1/-1}
-.skf label{font-size:12.5px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.66)}
-.skf input,.skf textarea,.skf select{font-family:var(--b);font-size:16px;padding:13px 14px;border:1px solid rgba(255,255,255,.24);border-radius:12px;background:rgba(255,255,255,.06);color:#fff;width:100%}
-.skf textarea{min-height:88px;resize:vertical}
-.skf input::placeholder,.skf textarea::placeholder{color:rgba(255,255,255,.38)}
-.skf input:focus,.skf textarea:focus,.skf select:focus{outline:2px solid var(--hiviz);outline-offset:-1px;background:rgba(255,255,255,.1)}
-.skf select option{color:var(--ink)}
-.skf .err{font-size:13px;color:#FFB4AE;display:none}
-.skf.bad .err{display:block}
-.skf.bad input,.skf.bad textarea{border-color:#FFB4AE}
-.skb{grid-column:1/-1;display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin-top:6px}
-.skb small{color:rgba(255,255,255,.6);font-size:13.5px;max-width:42ch}
-.sk .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
-.skok{background:rgba(216,236,60,.12);border:1px solid var(--hiviz);border-radius:14px;padding:18px 22px;margin-top:18px;display:none}
-.skok.on{display:block}
-.skok b{font-family:var(--d);color:var(--hiviz)}
-@media(max-width:700px){.skg{grid-template-columns:1fr}.sk{padding:26px 22px}}
+.sk{background:var(--ink);color:#fff;border-radius:20px;padding:38px 40px;margin:40px 0}
+.sk h2,.sk h3{color:#fff;margin:0 0 10px}
+.sk .skl{color:rgba(255,255,255,.76);font-size:16.5px;margin:0 0 26px;max-width:54ch}
+.skb{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.skb .btn{font-size:16.5px;padding:17px 32px}
+.skpunkt{list-style:none;padding:0;margin:0 0 26px;display:flex;flex-wrap:wrap;gap:9px 22px}
+.skpunkt li{position:relative;padding-left:19px;font-size:15px;color:rgba(255,255,255,.8)}
+.skpunkt li::before{content:"";position:absolute;left:0;top:10px;width:11px;height:2px;background:var(--hiviz)}
+.sktlf{margin:22px 0 0;font-size:15.5px;color:rgba(255,255,255,.7)}
+.sktlf a{color:var(--hiviz);font-weight:600}
+@media(max-width:700px){.sk{padding:26px 22px}}
 `
