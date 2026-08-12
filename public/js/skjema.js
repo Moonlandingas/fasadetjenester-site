@@ -90,6 +90,14 @@
       data.kilde = kilde
       data.side = location.pathname
 
+      // FormSubmit-felter: pen emnelinje, svar-til-adressen, og av med captcha
+      // (vi har honeypot i stedet, så brukeren slipper et ekstra hinder).
+      data._subject = 'Befaring fra nettsiden — ' + (data.navn || 'ukjent') +
+        (data.byggtype ? ' (' + data.byggtype + ')' : '')
+      data._template = 'table'
+      data._captcha = 'false'
+      if (form.dataset.kopi) data._cc = form.dataset.kopi
+
       // Honeypot: fylt ut = bot. Late som alt gikk bra, men ikke send noe.
       if (form.querySelector('[name="firma"]') && form.querySelector('[name="firma"]').value) {
         location.href = '/tusen-takk'
@@ -114,6 +122,14 @@
       })
         .then(function (r) {
           if (!r.ok) throw new Error('HTTP ' + r.status)
+          return r.json().catch(function () { return { success: true } })
+        })
+        .then(function (svar) {
+          // FormSubmit svarer 200 med success:"false" ved f.eks. ubekreftet
+          // mottakeradresse. Behandle det som feil, ellers mister vi leadet.
+          var ok = svar && (svar.success === true || svar.success === 'true' ||
+            svar.ok === true || svar.success === undefined)
+          if (!ok) throw new Error(svar && svar.message ? svar.message : 'avvist')
           location.href = '/tusen-takk'
         })
         .catch(function () {

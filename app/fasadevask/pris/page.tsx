@@ -1,5 +1,5 @@
 import Script from 'next/script'
-import { LIVE, BASE, PRISER_GODKJENT, TLF, TLF_VIS, EPOST, TYPEFORM_URL, SKJEMA_ENDPOINT, KOMMUNER } from '../../../lib/site'
+import { LIVE, BASE, PRISER_GODKJENT, TLF, TLF_VIS, EPOST, TYPEFORM_URL, SKJEMA_ENDPOINT, SKJEMA_KOPI, KOMMUNER } from '../../../lib/site'
 import { KVM_PRISER, RIGG, EKSEMPLER, KVM_MIN, KVM_MAKS, VALUTA } from '../../../lib/priser'
 import { SIDE_CSS, SKJEMA_CSS } from '../../../lib/css'
 
@@ -156,7 +156,7 @@ ${FAQ.map(([q, a]) => '<details class="fq"><summary>' + q + '</summary><p>' + a 
 <p class="ey" style="color:var(--hiviz)">Gratis befaring</p>
 <h2 style="margin-top:0">Få fast pris på ditt bygg</h2>
 <p class="skl">Intervallene over er utgangspunktet. Fast pris får du etter befaringen — den er gratis, og du velger selv om noe skal gjøres.</p>
-<form class="skjema" data-endpoint="${SKJEMA_ENDPOINT}" data-typeform="${TYPEFORM_URL}" data-kilde="fasadevask-pris" novalidate>
+<form class="skjema" data-endpoint="${SKJEMA_ENDPOINT}" data-typeform="${TYPEFORM_URL}" data-kopi="${SKJEMA_KOPI}" data-kilde="fasadevask-pris" novalidate>
 <div class="skg">
 <div class="skf"><label for="p-navn">Navn</label><input id="p-navn" name="navn" type="text" autocomplete="name" placeholder="Ola Nordmann" required><span class="err">Fyll inn navn.</span></div>
 <div class="skf"><label for="p-tlf">Telefon</label><input id="p-tlf" name="telefon" type="tel" inputmode="tel" autocomplete="tel" placeholder="912 34 567" required><span class="err">Åtte siffer, takk.</span></div>

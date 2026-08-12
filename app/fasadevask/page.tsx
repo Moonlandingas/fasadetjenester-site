@@ -1,5 +1,5 @@
 import Script from 'next/script'
-import { LIVE, BASE, PRISER_GODKJENT, TLF, TLF_VIS, EPOST, TYPEFORM_URL, SKJEMA_ENDPOINT, KOMMUNER } from '../../lib/site'
+import { LIVE, BASE, PRISER_GODKJENT, TLF, TLF_VIS, EPOST, TYPEFORM_URL, SKJEMA_ENDPOINT, SKJEMA_KOPI, KOMMUNER } from '../../lib/site'
 import { KVM_PRISER, RIGG, EKSEMPLER, KVM_MIN, KVM_MAKS, VALUTA } from '../../lib/priser'
 import { SIDE_CSS, SKJEMA_CSS } from '../../lib/css'
 
@@ -128,7 +128,7 @@ export default function Page() {
 <p class="ey" style="color:var(--hiviz)">Gratis befaring</p>
 <h2>Få pris på fasaden</h2>
 <p class="skl">Fyll ut, så ringer vi deg — som regel samme dag. Uforpliktende, og du velger selv om noe skal gjøres. Representerer du et styre, kan én befaring dekke hele vedlikeholdslista.</p>
-<form class="skjema" data-endpoint="${SKJEMA_ENDPOINT}" data-typeform="${TYPEFORM_URL}" data-kilde="fasadevask" novalidate>
+<form class="skjema" data-endpoint="${SKJEMA_ENDPOINT}" data-typeform="${TYPEFORM_URL}" data-kopi="${SKJEMA_KOPI}" data-kilde="fasadevask" novalidate>
 <div class="skg">
 <div class="skf"><label for="f-navn">Navn</label><input id="f-navn" name="navn" type="text" autocomplete="name" placeholder="Ola Nordmann" required><span class="err">Fyll inn navn.</span></div>
 <div class="skf"><label for="f-tlf">Telefon</label><input id="f-tlf" name="telefon" type="tel" inputmode="tel" autocomplete="tel" placeholder="912 34 567" required><span class="err">Åtte siffer, takk.</span></div>

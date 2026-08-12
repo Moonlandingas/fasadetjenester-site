@@ -37,8 +37,22 @@ export const TYPEFORM_URL = 'https://416jbe00upv.typeform.com/to/' + TYPEFORM_ID
 //
 // Uansett variant pushes hendelsen 'befaring_skjema' til dataLayer, slik at
 // GTM/Google Ads kan telle konverteringen uten å være avhengig av redirect.
+//
+// VIKTIG — FØRSTE INNSENDING MÅ BEKREFTES.
+// FormSubmit sender én aktiveringsmail til adressen under første gang skjemaet
+// brukes. Klikk lenken i den mailen, ellers kommer ingen leads gjennom.
+// Test skjemaet selv én gang etter deploy, og bekreft mailen.
+//
+// Vil dere heller ha Formspree, Web3Forms eller egen mottaker senere: bytt
+// bare URL-en her. Skjemaet POST-er JSON og bryr seg ikke om hvem som tar imot.
 // ---------------------------------------------------------------------------
-export const SKJEMA_ENDPOINT = ''
+export const SKJEMA_ENDPOINT = 'https://formsubmit.co/ajax/terje@fasadetjenester.no'
+
+// Kopimottaker for varsling internt. Tom = kun adressen i endepunktet over.
+export const SKJEMA_KOPI = ''
+
+// Grafittivideo (JWPlayer). Tom streng skjuler videoseksjonen.
+export const GRAFITTI_VIDEO = 'https://cdn.jwplayer.com/players/brXg3yG3-DqlJkzVm.html'
 
 // Kommuner vi dekker — brukes i LocalBusiness.areaServed (eksplisitt liste
 // gir bedre lokal forståelse enn 'Østlandet').

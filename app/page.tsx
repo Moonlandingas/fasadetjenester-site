@@ -1,5 +1,5 @@
 import Script from 'next/script'
-import { LIVE, PRISER_GODKJENT, TLF, TLF_VIS, TYPEFORM_URL, SKJEMA_ENDPOINT } from '../lib/site'
+import { LIVE, PRISER_GODKJENT, TLF, TLF_VIS, TYPEFORM_URL, SKJEMA_ENDPOINT, SKJEMA_KOPI, GRAFITTI_VIDEO } from '../lib/site'
 import { SKJEMA_CSS } from '../lib/css'
 export const metadata = {
   title: "Fasadevask og utvendig vedlikehold | Fasadetjenester AS",
@@ -123,8 +123,8 @@ header.st .lg em{color:var(--navy)}header.st .bg1{border-color:var(--ink);color:
 .cs{list-style:none;padding:0;margin:20px 0 22px;display:flex;flex-wrap:wrap;gap:7px}
 .cs li{font-size:13.5px;padding:6px 13px;background:var(--paper);border:1px solid var(--puss2);border-radius:100px;color:var(--steind)}
 .bar{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:48px}.ba{margin:0}
-.bs{position:relative;aspect-ratio:3/4;border-radius:var(--r);overflow:hidden;background:var(--ink2);cursor:ew-resize;touch-action:pan-y}
-.bi{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.bs{position:relative;aspect-ratio:3/4;border-radius:var(--r);overflow:hidden;background:var(--ink2);cursor:ew-resize;touch-action:pan-y;border:1px solid rgba(255,255,255,.15)}
+.bi{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;background:var(--ink2)}
 .bat{position:absolute;inset:0;clip-path:inset(0 0 0 50%)}
 .bt{position:absolute;top:13px;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;padding:5px 11px;border-radius:100px;background:rgba(8,14,24,.66);color:#fff;pointer-events:none}
 .btf{left:13px}.bte{right:13px;background:var(--hiviz);color:#161D06}
@@ -192,6 +192,21 @@ footer{background:var(--ink);color:#98A2B0;padding:64px 0 40px;font-size:14.5px}
 .pn{background:var(--navy);color:#DCE7F5;padding:11px 0;font-size:13.5px;position:relative;z-index:70}
 .tbd{border-bottom:1.5px dotted var(--hiviz)}
 .rv{opacity:0;transform:translateY(20px)}.rv.in{opacity:1;transform:none;transition:.7s}
+.sert{background:var(--paper);border-top:1px solid var(--puss2);border-bottom:1px solid var(--puss2);padding:30px 0}
+.sertw{display:flex;align-items:center;justify-content:center;gap:clamp(26px,5vw,64px);flex-wrap:wrap}
+.serti{display:flex;align-items:center;gap:15px;text-align:left}
+.serti img{height:64px;width:auto;flex:none}
+.serti b{font-family:var(--d);font-size:15.5px;display:block;line-height:1.25}
+.serti span{font-size:13.5px;color:var(--steind);display:block;margin-top:3px;max-width:24ch}
+@media(max-width:700px){.sertw{gap:22px}.serti img{height:52px}.serti span{max-width:none}}
+.mest{display:flex;gap:20px;align-items:center;background:var(--puss);border:1px solid var(--puss2);border-radius:16px;padding:20px 22px;margin:22px 0 4px;max-width:56ch}
+.mest img{height:76px;width:auto;flex:none}
+.mest b{font-family:var(--d);font-size:16.5px;display:block;margin-bottom:4px}
+.mest p{margin:0;font-size:14.5px;color:var(--steind)}
+@media(max-width:560px){.mest{flex-direction:column;align-items:flex-start;gap:14px}}
+.vid{margin-top:52px}
+.vidb{position:relative;aspect-ratio:1/1;max-width:560px;margin:22px auto 0;border-radius:var(--r);overflow:hidden;background:var(--ink2);border:1px solid rgba(255,255,255,.15)}
+.vidb iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 @media(max-width:960px){section{padding:74px 0}.nv{display:none}.hb{display:inline-flex;margin-left:auto}.tel{display:none}.hd .btn{padding:9px 16px;font-size:13.5px}.hd{gap:12px}.cl1{display:none}.cs1{display:inline}
 .wg,.pg,.om,.omr,.fg,.hmsg{grid-template-columns:1fr;gap:26px}
 .cat{grid-template-columns:1fr;gap:22px}.cm img{aspect-ratio:16/9}
@@ -267,7 +282,15 @@ ${PRISER_GODKJENT ? '<a href="/fasadevask/pris">Hva koster fasadevask?</a>' : ''
 
 <div class="strip"><div class="wrap"><ul>
 <li>Næringsbygg, sameier og borettslag</li><li>Offentlig godkjent renholdsbedrift</li>
-<li>Hele Sørøst-Norge, inkludert Gjøvikregionen</li><li>Miljøfyrtårn-sertifisert</li></ul></div></div>
+<li>Hele Sørøst-Norge, inkludert Gjøvikregionen</li><li>Mesterbedrift</li></ul></div></div>
+
+<div class="sert"><div class="wrap sertw">
+<div class="serti"><img src="/img/logo-miljofyrtarn.webp" alt="Miljøfyrtårn-sertifisert" loading="lazy" width="80" height="68">
+<div><b>Miljøfyrtårn-sertifisert</b><span>Dokumentert miljøledelse — etterspørres stadig oftere i anbud fra styrer og forvaltere.</span></div></div>
+<div class="serti"><img src="/img/logo-mester.webp" alt="Mesterbrev — mesterbedrift" loading="lazy" width="80" height="64">
+<div><b>Mesterbedrift</b><span>Mesterbrev innen mur, maling og blikkenslagerfaget.</span></div></div>
+<div class="serti" style="gap:0"><div><b>Offentlig godkjent renholdsbedrift</b><span>Registrert i Arbeidstilsynets godkjenningsordning.</span></div></div>
+</div></div>
 
 <section class="kb"><div class="wrap kbw">
 <div><p class="kbk">Kontakt oss i dag</p><a class="kbtel" href="tel:+4792979177">929 79 177</a></div>
@@ -300,7 +323,10 @@ ${PRISER_GODKJENT ? '<a href="/fasadevask/pris">Hva koster fasadevask?</a>' : ''
 <div class="nar rv"><p class="ey">Tjenester</p><h2 class="h2">Fire områder. Én leverandør.</h2>
 <p style="font-size:18.5px;color:var(--steind);margin-top:18px">Hvert område får sin egen side med undertjenester, priseksempler og bilder fra faktiske jobber — slik at et søk på «lekkasje tak» eller «grafittifjerning Oslo» lander riktig med én gang.</p></div>
 <div class="cats rv"><article class="cat" id="fasadevask-rengjoring"><div class="cm"><img src="/img/c_fasade.webp" alt="Fasadevask og utvendig rengjøring" loading="lazy"></div><div class="cb"><p class="cn">01</p><h3 class="ct">Fasadevask og utvendig rengjøring</h3><p class="cl">Hele det utvendige, fra rekkverk til gesims. Softwash der overflaten er sårbar, høytrykk der den tåler det.</p><ul class="cs"><li>Fasadevask</li><li>Vindusvask</li><li>Grafittifjerning</li><li>Garasjevask</li><li>Softwash</li><li>Høytrykksvask</li><li>Algevask og mosevask</li><li>Utvendig rengjøring av næringsbygg</li></ul><a class="la" href="/fasadevask">${PRISER_GODKJENT ? 'Se priser på fasadevask' : 'Mer om fasadevask'} <span aria-hidden="true">→</span></a></div></article><article class="cat" id="handverk"><div class="cm"><img src="/img/c_handverk.webp" alt="Håndverk" loading="lazy"></div><div class="cb"><p class="cn">02</p><h3 class="ct">Håndverk</h3><p class="cl">Mur, betong, tak, beslag og snekker. Ser vi skadet puss eller rusten armering under befaringen, kan vi ta det selv — uten å hente inn noen andre.</p>
-<p class="cl" style="margin-top:-6px">Tak- og metallarbeid dekker både blikkenslager- og kobberslagerfaget: beslag, pipebeslag, takrenner og nedløp, taktekking og fasadeelementer i stål, sink og aluminium — og de tynnere kobberarbeidene på eldre bygg, fra takdetaljer til tårnspir. Gammel metalltradisjon møter moderne byggteknikk, og på bygårder er det ofte nettopp dette arbeidet som avgjør om taket holder tett i tiår.</p><ul class="cs"><li>Murreparasjon og betongrehabilitering</li><li>Fasademaling</li><li>Taktekking og takreparasjon</li><li>Lekkasje i tak</li><li>Blikkenslagerarbeid</li><li>Kobberslagerarbeid</li><li>Beslag og pipebeslag</li><li>Snekkerarbeid</li><li>Levegg</li><li>Tilstandsrapport</li></ul><a class="la" href="#befaring">Be om pris <span aria-hidden="true">→</span></a></div></article><article class="cat" id="vinter-sikring"><div class="cm"><img src="/img/c_vinter.webp" alt="Vinter og sikring" loading="lazy"></div><div class="cb"><p class="cn">03</p><h3 class="ct">Vinter og sikring</h3><p class="cl">Fra første frost til siste tine. Med fast avtale er vi der før dere rekker å ringe.</p><ul class="cs"><li>Istappfjerning</li><li>Snørydding av tak</li><li>Salting og strøing</li><li>Issikring</li><li>Vintervedlikehold</li><li>Rasfare- og istappskilt</li></ul><a class="la" href="#befaring">Be om pris <span aria-hidden="true">→</span></a></div></article><article class="cat" id="renhold"><div class="cm"><img src="/img/c_renhold.webp" alt="Løpende renhold" loading="lazy"></div><div class="cb"><p class="cn">04</p><h3 class="ct">Løpende renhold</h3><p class="cl">Daglig og fast renhold av nærings- og kontorbygg. Offentlig godkjent renholdsbedrift — og samme kontaktperson som for alt det andre.</p><ul class="cs"><li>Daglig renhold</li><li>Kontorrenhold</li><li>Renholdsavtale</li><li>Trappevask</li></ul><a class="la" href="#befaring">Be om pris <span aria-hidden="true">→</span></a></div></article></div></div></section>
+<p class="cl" style="margin-top:-6px">Tak- og metallarbeid dekker både blikkenslager- og kobberslagerfaget: beslag, pipebeslag, takrenner og nedløp, taktekking og fasadeelementer i stål, sink og aluminium — og de tynnere kobberarbeidene på eldre bygg, fra takdetaljer til tårnspir. Gammel metalltradisjon møter moderne byggteknikk, og på bygårder er det ofte nettopp dette arbeidet som avgjør om taket holder tett i tiår.</p><ul class="cs"><li>Murreparasjon og betongrehabilitering</li><li>Fasademaling</li><li>Taktekking og takreparasjon</li><li>Lekkasje i tak</li><li>Blikkenslagerarbeid</li><li>Kobberslagerarbeid</li><li>Beslag og pipebeslag</li><li>Snekkerarbeid</li><li>Levegg</li><li>Tilstandsrapport</li></ul>
+<div class="mest"><img src="/img/logo-mester.webp" alt="Mesterbrev" loading="lazy" width="86" height="68">
+<div><b>Mesterbedrift — mur, maling og blikkenslager</b><p>Håndverket vårt utføres under mesterbrev innen murer-, maler- og blikkenslagerfaget. For et styre betyr det dokumentert fagkompetanse på det arbeidet som faktisk avgjør om bygget holder tett.</p></div></div>
+<a class="la" href="#befaring">Be om pris <span aria-hidden="true">→</span></a></div></article><article class="cat" id="vinter-sikring"><div class="cm"><img src="/img/c_vinter.webp" alt="Vinter og sikring" loading="lazy"></div><div class="cb"><p class="cn">03</p><h3 class="ct">Vinter og sikring</h3><p class="cl">Fra første frost til siste tine. Med fast avtale er vi der før dere rekker å ringe.</p><ul class="cs"><li>Istappfjerning</li><li>Snørydding av tak</li><li>Salting og strøing</li><li>Issikring</li><li>Vintervedlikehold</li><li>Rasfare- og istappskilt</li></ul><a class="la" href="#befaring">Be om pris <span aria-hidden="true">→</span></a></div></article><article class="cat" id="renhold"><div class="cm"><img src="/img/c_renhold.webp" alt="Løpende renhold" loading="lazy"></div><div class="cb"><p class="cn">04</p><h3 class="ct">Løpende renhold</h3><p class="cl">Daglig og fast renhold av nærings- og kontorbygg. Offentlig godkjent renholdsbedrift — og samme kontaktperson som for alt det andre.</p><ul class="cs"><li>Daglig renhold</li><li>Kontorrenhold</li><li>Flyttevask</li><li>Renholdsavtale</li><li>Trappevask</li></ul><a class="la" href="#befaring">Be om pris <span aria-hidden="true">→</span></a></div></article></div></div></section>
 
 <section class="dk" id="resultater"><div class="wrap">
 <div class="nar rv"><p class="ey">Før og etter</p><h2 class="h2">Dra i linja og se forskjellen.</h2>
@@ -310,7 +336,12 @@ ${PRISER_GODKJENT ? '<a href="/fasadevask/pris">Hva koster fasadevask?</a>' : ''
 <figure class="ba" data-ba><div class="bs"><img class="bi" src="/img/ba_tak_for.webp" alt="Tak med mose og begroing"><div class="bat"><img class="bi" src="/img/ba_tak_etter.webp" alt="Tak etter rens"></div><span class="bt btf">Før</span><span class="bt bte">Etter</span><div class="bh" aria-hidden="true"><span></span></div><input class="br" type="range" min="0" max="100" value="50" step="0.1" aria-label="Dra for å avdekke etter-bildet: Takvask"></div><figcaption><strong>Takvask</strong> Mose og begroing fjernet fra taket.</figcaption></figure>
 <figure class="ba" data-ba><div class="bs"><img class="bi" src="/img/ba_fas_for.webp" alt="Fasade med algebelegg"><div class="bat"><img class="bi" src="/img/ba_fas_etter.webp" alt="Fasade etter vask"></div><span class="bt btf">Før</span><span class="bt bte">Etter</span><div class="bh" aria-hidden="true"><span></span></div><input class="br" type="range" min="0" max="100" value="50" step="0.1" aria-label="Dra for å avdekke etter-bildet: Fasadevask"></div><figcaption><strong>Fasadevask</strong> Alger og grønske vasket bort med softwash.</figcaption></figure>
 </div>
-<p style="margin-top:34px;font-size:14.5px;color:rgba(228,233,239,.5)" class="rv">Slideren settes opp for hver tjenestekategori der det finnes egnet bildemateriale.</p></div></section>
+${GRAFITTI_VIDEO ? `<div class="vid rv">
+<h3 style="font-size:clamp(22px,2.6vw,29px);margin:0">Grafittifjerning — se hvordan vi gjør det</h3>
+<p style="font-size:16.5px;color:rgba(228,233,239,.72);margin:12px 0 0;max-width:52ch">Tagging fjernes uten å skade pussen under. Metoden velges etter underlaget, akkurat som ved fasadevask.</p>
+<div class="vidb"><iframe src="${GRAFITTI_VIDEO}" title="Fasadetjenester — grafittifjerning" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
+</div>` : ''}
+</div></section>
 
 <section id="prosess"><div class="wrap">
 <div class="nar rv"><p class="ey">Slik jobber vi</p><h2 class="h2">Tre steg. Ingen overraskelser.</h2></div>
@@ -326,7 +357,11 @@ ${PRISER_GODKJENT ? '<a href="/fasadevask/pris">Hva koster fasadevask?</a>' : ''
 <blockquote class="oq">«Jeg er på befaringene selv. Da vet du hvem du har snakket med når vi først er i gang.»</blockquote>
 <p style="color:var(--steind);max-width:46ch">Fasadetjenester er et lite firma med korte linjer. Du får samme kontaktperson gjennom hele jobben — og gjennom hele året. Rådene og artiklene her på siden er skrevet av oss som faktisk gjør arbeidet.</p>
 <div class="os"><i></i><div><strong>Terje Gulliksen</strong><br><span style="color:var(--steind)">Daglig leder, Fasadetjenester AS</span></div></div>
-<div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:26px"><div class="badge" style="margin-top:0"><i></i>Offentlig godkjent renholdsbedrift</div><div class="badge" style="margin-top:0"><i></i>Miljøfyrtårn-sertifisert</div></div>
+<div style="display:flex;gap:18px;flex-wrap:wrap;align-items:center;margin-top:26px">
+<img src="/img/logo-miljofyrtarn.webp" alt="Miljøfyrtårn-sertifisert" loading="lazy" width="82" height="70" style="height:70px;width:auto">
+<img src="/img/logo-mester.webp" alt="Mesterbrev — mesterbedrift" loading="lazy" width="82" height="65" style="height:66px;width:auto">
+<div class="badge" style="margin-top:0"><i></i>Offentlig godkjent renholdsbedrift</div></div>
+<p style="color:var(--steind);margin-top:16px;font-size:15px;max-width:46ch">Miljøfyrtårn er ikke bare et merke for oss: kjemikaliebruk, avfallshåndtering og transport dokumenteres årlig. Stadig flere styrer og forvaltere krever det i anbud.</p>
 <p style="color:var(--steind);margin-top:22px;font-size:15px;max-width:46ch">På laget står også Steinar — drift og vakttelefon — og faste, kvalitetssikrede underleverandører.</p>
 <p style="margin-top:18px"><a class="la" href="#">Møt hele teamet <span aria-hidden="true">→</span></a></p></div></div></section>
 
@@ -366,7 +401,7 @@ ${PRISER_GODKJENT ? '<a href="/fasadevask/pris">Hva koster fasadevask?</a>' : ''
 <div class="sk rv" style="margin-top:34px">
 <h3 style="font-size:24px;margin:0 0 8px">Fire felt, og vi ringer deg</h3>
 <p class="skl">Har du huket av tjenester over, følger de automatisk med.</p>
-<form class="skjema" data-endpoint="${SKJEMA_ENDPOINT}" data-typeform="${TYPEFORM_URL}" data-kilde="forside" novalidate>
+<form class="skjema" data-endpoint="${SKJEMA_ENDPOINT}" data-typeform="${TYPEFORM_URL}" data-kopi="${SKJEMA_KOPI}" data-kilde="forside" novalidate>
 <div class="skg">
 <div class="skf"><label for="h-navn">Navn</label><input id="h-navn" name="navn" type="text" autocomplete="name" placeholder="Ola Nordmann" required><span class="err">Fyll inn navn.</span></div>
 <div class="skf"><label for="h-tlf">Telefon</label><input id="h-tlf" name="telefon" type="tel" inputmode="tel" autocomplete="tel" placeholder="912 34 567" required><span class="err">Åtte siffer, takk.</span></div>
