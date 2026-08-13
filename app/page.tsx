@@ -192,13 +192,6 @@ footer{background:var(--ink);color:#98A2B0;padding:64px 0 40px;font-size:14.5px}
 .pn{background:var(--navy);color:#DCE7F5;padding:11px 0;font-size:13.5px;position:relative;z-index:70}
 .tbd{border-bottom:1.5px dotted var(--hiviz)}
 .rv{opacity:0;transform:translateY(20px)}.rv.in{opacity:1;transform:none;transition:.7s}
-.sert{background:var(--paper);border-top:1px solid var(--puss2);border-bottom:1px solid var(--puss2);padding:30px 0}
-.sertw{display:flex;align-items:center;justify-content:center;gap:clamp(26px,5vw,64px);flex-wrap:wrap}
-.serti{display:flex;align-items:center;gap:15px;text-align:left}
-.serti img{height:64px;width:auto;flex:none}
-.serti b{font-family:var(--d);font-size:15.5px;display:block;line-height:1.25}
-.serti span{font-size:13.5px;color:var(--steind);display:block;margin-top:3px;max-width:24ch}
-@media(max-width:700px){.sertw{gap:22px}.serti img{height:52px}.serti span{max-width:none}}
 .mest{display:flex;gap:20px;align-items:center;background:var(--puss);border:1px solid var(--puss2);border-radius:16px;padding:20px 22px;margin:22px 0 4px;max-width:56ch}
 .mest img{height:76px;width:auto;flex:none}
 .mest b{font-family:var(--d);font-size:16.5px;display:block;margin-bottom:4px}
@@ -288,14 +281,8 @@ footer{background:var(--ink);color:#98A2B0;padding:64px 0 40px;font-size:14.5px}
 <div><p class="kbk">Kontakt oss i dag</p><a class="kbtel" href="tel:+4792979177">929 79 177</a><p style="margin:10px 0 0"><a href="mailto:terje@fasadetjenester.no" style="color:#CBD9EA;font-size:16px">terje@fasadetjenester.no</a></p></div>
 <div class="kbact"><a class="btn bs1" href="#befaring">Bestill gratis befaring</a><a class="btn bg1" href="mailto:terje@fasadetjenester.no">Send e-post</a></div>
 </div></section>
-<div class="serti"><img src="/img/logo-mester.webp" alt="Mesterbrev — mesterbedrift" loading="lazy" width="80" height="64">
-<div><b>Mesterbedrift</b><span>Mesterbrev innen mur, maling og blikkenslagerfaget.</span></div></div>
-<div class="serti" style="gap:0"><div><b>Offentlig godkjent renholdsbedrift</b><span>Registrert i Arbeidstilsynets godkjenningsordning.</span></div></div>
 </div></div>
 
-<div class="sert"><div class="wrap sertw">
-<div class="serti"><img src="/img/logo-miljofyrtarn.webp" alt="Miljøfyrtårn-sertifisert" loading="lazy" width="80" height="68">
-<div><b>Miljøfyrtårn-sertifisert</b><span>Dokumentert miljøledelse — etterspørres stadig oftere i anbud fra styrer og forvaltere.</span></div></div>
 
 <section class="dk" id="arshjul"><div class="wrap">
 <div class="nar rv"><p class="ey">Årshjulet</p>
@@ -357,7 +344,8 @@ ${GRAFITTI_VIDEO ? `<div class="vid rv">
 <blockquote class="oq">«Jeg er på befaringene selv. Da vet du hvem du har snakket med når vi først er i gang.»</blockquote>
 <p style="color:var(--steind);max-width:46ch">Fasadetjenester er et lite firma med korte linjer. Du får samme kontaktperson gjennom hele jobben — og gjennom hele året. Rådene og artiklene her på siden er skrevet av oss som faktisk gjør arbeidet.</p>
 <div class="os"><i></i><div><strong>Terje Gulliksen</strong><br><span style="color:var(--steind)">Daglig leder, Fasadetjenester AS</span></div></div>
-<div style="display:flex;gap:18px;flex-wrap:wrap;align-items:center;margin-top:26px">
+<p class="ey" style="margin:30px 0 12px">Sertifiseringer</p>
+<div style="display:flex;gap:22px;flex-wrap:wrap;align-items:center;margin-top:0">
 <img src="/img/logo-miljofyrtarn.webp" alt="Miljøfyrtårn-sertifisert" loading="lazy" width="82" height="70" style="height:70px;width:auto">
 <img src="/img/logo-mester.webp" alt="Mesterbrev — mesterbedrift" loading="lazy" width="82" height="65" style="height:66px;width:auto">
 <div class="badge" style="margin-top:0"><i></i>Offentlig godkjent renholdsbedrift</div></div>
