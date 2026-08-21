@@ -78,3 +78,27 @@ export const SKJEMA_CSS = `
 .sktlf a{color:var(--hiviz);font-weight:600}
 @media(max-width:700px){.sk{padding:26px 22px}}
 `
+
+// Hero for tjeneste- og prissider: bilde + gradient, stor tittel, CTA over folden.
+export const HERO_CSS = `
+.hero2{position:relative;background:var(--ink);color:#fff;overflow:hidden}
+.hero2 .hbg2{position:absolute;inset:0;background-size:cover;background-position:center 30%;opacity:.5}
+.hero2::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(8,14,24,.94) 0%,rgba(8,14,24,.82) 45%,rgba(8,14,24,.55) 100%)}
+.hero2 .hin2{position:relative;z-index:2;max-width:1160px;margin:0 auto;padding:64px 24px 54px}
+.hero2 .crumb{color:rgba(255,255,255,.55);margin:0 0 26px}.hero2 .crumb a{color:rgba(255,255,255,.55)}
+.hero2 .ey{color:var(--hiviz);margin-bottom:14px}
+.hero2 h1{font-size:clamp(36px,5.4vw,62px);line-height:1.06;letter-spacing:-.028em;max-width:19ch;margin:0 0 20px;color:#fff;text-shadow:0 2px 24px rgba(0,0,0,.45)}
+.hero2 .hsub2{font-size:clamp(17px,2vw,19.5px);color:rgba(255,255,255,.88);max-width:54ch;margin:0 0 30px;text-shadow:0 1px 14px rgba(0,0,0,.4)}
+.hcta2{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.hcta2 .btn{font-size:16.5px;padding:17px 32px}
+.hcta2 .btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.5)}
+.hcta2 .btn.ghost:hover{background:#fff;color:var(--ink);border-color:#fff}
+.htrust{display:flex;gap:9px 24px;flex-wrap:wrap;list-style:none;padding:0;margin:32px 0 0;border-top:1px solid rgba(255,255,255,.2);padding-top:20px}
+.htrust li{position:relative;padding-left:24px;font-size:14.5px;color:rgba(255,255,255,.85);font-weight:500}
+.htrust li::before{content:"✓";position:absolute;left:0;top:0;color:var(--hiviz);font-weight:700}
+.hstats{display:flex;gap:12px;flex-wrap:wrap;margin:0 0 30px}
+.hstat{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.2);border-radius:14px;padding:13px 18px;backdrop-filter:blur(4px)}
+.hstat b{font-family:var(--d);font-size:clamp(19px,2.4vw,24px);font-weight:600;display:block;line-height:1.1;color:var(--hiviz)}
+.hstat span{font-size:12.5px;color:rgba(255,255,255,.72);display:block;margin-top:3px}
+@media(max-width:700px){.hero2 .hin2{padding:44px 22px 40px}.hcta2 .btn{width:100%;justify-content:center}.hstats{gap:8px}.hstat{padding:10px 14px;flex:1 1 40%}}
+`
