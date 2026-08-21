@@ -1,7 +1,7 @@
 import Script from 'next/script'
 import { LIVE, BASE, TLF, TLF_VIS, EPOST, TYPEFORM_URL } from '../../../lib/site'
 import { MARKED_KVM, MARKED_BYGG, MARKED_POSTER, KILDER, KALK, HENTET } from '../../../lib/priser'
-import { SIDE_CSS, SKJEMA_CSS } from '../../../lib/css'
+import { SIDE_CSS, SKJEMA_CSS, HERO_CSS } from '../../../lib/css'
 
 const TITTEL = 'Fasadevask pris: hva koster det i 2026? | Fasadetjenester AS'
 const BESKR = 'Fasadevask koster typisk 15–60 kr per m² i Norge. Se markedspriser per metode og bygningstype, hva som driver prisen, og hvordan du leser et tilbud — skrevet av fagfolk som gjør jobben.'
@@ -88,7 +88,7 @@ export default function Page() {
   return (<>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"/>
-    <style dangerouslySetInnerHTML={{ __html: SIDE_CSS + SKJEMA_CSS + `
+    <style dangerouslySetInnerHTML={{ __html: SIDE_CSS + SKJEMA_CSS + HERO_CSS + `
 .kalk{background:var(--puss);border:1px solid var(--puss2);border-radius:20px;padding:30px;margin:30px 0}
 .kalk h3{margin:0 0 6px;font-size:22px}
 .kalkl{font-size:15px;color:var(--steind);margin:0 0 22px;max-width:52ch}
@@ -112,10 +112,23 @@ export default function Page() {
 <nav class="anv"><a href="/">Forside</a><a href="/fasadevask">Fasadevask</a><a href="/fasadevask/pris">Pris</a><a href="/#tjenester">Tjenester</a><a href="/verdt-a-vite">Verdt å vite</a></nav>
 <a class="btn" href="#befaring">Gratis befaring</a></div></header>
 
-<div class="wrap">
+<section class="hero2"><div class="hbg2" style="background-image:url('/img/hero.webp')"></div>
+<div class="hin2">
 <p class="crumb"><a href="/">Forside</a> / <a href="/fasadevask">Fasadevask</a> / Pris</p>
 <p class="ey">Prisguide · sist gjennomgått ${HENTET}</p>
-<h1>Fasadevask pris: hva koster det?</h1>
+<h1>Hva koster fasadevask? Her er tallene.</h1>
+<div class="hstats">
+<div class="hstat"><b>15–60 kr/m²</b><span>markedspris per kvadratmeter</span></div>
+<div class="hstat"><b>5 000–25 000 kr</b><span>enebolig</span></div>
+<div class="hstat"><b>1 000–3 000 kr</b><span>per enhet i borettslag</span></div>
+</div>
+<p class="hsub2">De fleste svarer «pris etter befaring» og stopper der. Vi viser deg markedstallene med kilder — så vet du hva du går til før vi kommer ut.</p>
+<div class="hcta2"><a class="btn" href="${TYPEFORM_URL}" data-tf-open data-tf-kilde="pris-hero">Bestill gratis befaring</a>
+<a class="btn ghost" href="#kalkulator">Prøv kalkulatoren</a></div>
+<p style="margin:18px 0 0;font-size:14.5px;color:rgba(255,255,255,.75)">Befaringen er gratis og uforpliktende — du får fast pris per tjeneste, og velger selv om noe skal gjøres.</p>
+</div></section>
+
+<div class="wrap">
 
 <div class="svar"><b>Kort svar:</b> Fasadevask koster typisk <strong>15–60 kr per kvadratmeter</strong> fasadeflate i Norge. Enkel vask ligger på 15–30 kr/m², vask med algebehandling på 25–45 kr/m², og full behandling med mosefjerning og impregnering på 35–60 kr/m². En enebolig havner normalt på <strong>5 000–25 000 kr</strong>, en boligblokk på 500 m² på <strong>25 000–40 000 kr</strong>, og et borettslag med 20 enheter på <strong>1 000–3 000 kr per enhet</strong>. Tilkomst påvirker totalen mer enn arealet alene.</div>
 

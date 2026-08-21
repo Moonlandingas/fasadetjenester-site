@@ -1,6 +1,6 @@
 import Script from 'next/script'
 import { LIVE, BASE, TLF, TLF_VIS, EPOST, TYPEFORM_URL, KOMMUNER } from '../../lib/site'
-import { SIDE_CSS, SKJEMA_CSS } from '../../lib/css'
+import { SIDE_CSS, SKJEMA_CSS, HERO_CSS } from '../../lib/css'
 
 const TITTEL = 'Fasadevask for borettslag, sameier og næringsbygg | Fasadetjenester AS'
 const BESKR = 'Fasadevask med softwash og høytrykk for borettslag, sameier og næringsbygg i Oslo og Akershus. Metode etter underlag, fast pris per tjeneste, gratis befaring.'
@@ -72,7 +72,7 @@ export default function Page() {
   return (<>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"/>
-    <style dangerouslySetInnerHTML={{ __html: SIDE_CSS + SKJEMA_CSS }}/>
+    <style dangerouslySetInnerHTML={{ __html: SIDE_CSS + SKJEMA_CSS + HERO_CSS }}/>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: ld }}/>
     <div dangerouslySetInnerHTML={{ __html: `
 
@@ -80,13 +80,18 @@ export default function Page() {
 <nav class="anv"><a href="/">Forside</a><a href="/fasadevask">Fasadevask</a><a href="/fasadevask/pris">Pris</a><a href="/#tjenester">Tjenester</a><a href="/verdt-a-vite">Verdt å vite</a></nav>
 <a class="btn" href="#befaring">Gratis befaring</a></div></header>
 
-<div class="wrap">
+<section class="hero2"><div class="hbg2" style="background-image:url('/img/hero.webp')"></div>
+<div class="hin2">
 <p class="crumb"><a href="/">Forside</a> / Fasadevask</p>
-<p class="ey">Fasadevask</p>
-<h1>Fasadevask for borettslag, sameier og næringsbygg</h1>
-<p class="lede">Grønske på fasaden er ikke et kosmetisk problem — det er fukt som har fått feste, og fukt er det som bryter ned puss, maling og treverk. Vi vasker fasaden med metoden underlaget faktisk tåler, og ser samtidig over tak, takrenner og mur mens vi er der.</p>
+<p class="ey">Fasadevask · Gratis befaring — ofte samme uke</p>
+<h1>Fasadevask — nesten som nymalt, til en brøkdel av prisen.</h1>
+<p class="hsub2">Grønske og svertesopp er fukt som har fått feste — og fukt er det som til slutt koster deg puss og maling. Vi fjerner det med metoden fasaden faktisk tåler, og du får fast pris etter en gratis befaring.</p>
+<div class="hcta2"><a class="btn" href="${TYPEFORM_URL}" data-tf-open data-tf-kilde="fasadevask-hero">Bestill gratis befaring</a>
+<a class="btn ghost" href="tel:${TLF}">Ring ${TLF_VIS}</a></div>
+<ul class="htrust"><li>Gratis og uforpliktende befaring</li><li>Mesterbedrift</li><li>Miljøfyrtårn-sertifisert</li><li>Ett tilbud, én faktura</li></ul>
+</div></section>
 
-<div class="meta"><span>Oslo, Akershus og hele Sørøst-Norge</span><span>·</span><span>Offentlig godkjent renholdsbedrift</span><span>·</span><span>Miljøfyrtårn-sertifisert</span></div>
+<div class="wrap">
 
 <div class="svar"><b>Kort svar:</b> De fleste fasader bør vaskes hvert 1.–2. år. Pussede og nordvendte fasader gror raskest til og kan trenge årlig vask. Metoden avgjøres av underlaget: softwash for puss, eldre tegl og malt kledning — høytrykk kun der overflaten tåler det. Prisen avhenger av areal, høyde og tilkomst, og settes etter en gratis befaring.</div>
 </div>

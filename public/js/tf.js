@@ -13,6 +13,9 @@
   function dl(kilde) {
     window.dataLayer = window.dataLayer || []
     window.dataLayer.push({ event: 'befaring_skjema', skjema_kilde: kilde || 'ukjent' })
+    // Speil til Matomo, saa skjema-leads telles der ogsaa.
+    window._paq = window._paq || []
+    window._paq.push(['trackEvent', 'Lead', 'Befaring skjema', kilde || 'ukjent'])
   }
 
   function valgteTjenester() {

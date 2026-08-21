@@ -86,6 +86,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Script id="gtm" src="/js/gtm.js" strategy="afterInteractive" />
         <Script id="matomo" src="/js/matomo.js" strategy="afterInteractive" />
         <Script id="meta-pixel" src="/js/meta-pixel.js" strategy="afterInteractive" />
+        <Script id="spor" src="/js/spor.js" strategy="afterInteractive" />
         <Script id="consent-banner" src="/js/consent.js" strategy="afterInteractive" />
       </body>
     </html>
