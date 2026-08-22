@@ -33,6 +33,8 @@ const FAQ = [
     'Vår og tidlig sommer er høysesong — da tar du vinterens tilsmussing før pollensesongen. Men fasadevask kan utføres store deler av året så lenge det er frostfritt. Skal fasaden males, må den uansett vaskes først.'],
   ['Må beboerne være hjemme når fasaden vaskes?',
     'Nei. Vi trenger tilgang til vann og at vinduer er lukket. For borettslag varsler vi beboerne på forhånd, og styret trenger ikke stille med noen på vaskedagen.'],
+  ['Tar dere takvask også?',
+    'Ja. Takvask og mosefjerning gjøres gjerne i samme runde som fasadevasken — da deles rigg- og kjørekostnaden, og taket blir vurdert av de samme fagfolkene som står på bygget uansett. Metoden velges etter taktypen: skånsom mosefjerning med impregnering på sårbar takstein, høytrykk kun der taket tåler det.'],
   ['Hvilke områder dekker dere?',
     'Kjerneområdet er Oslo og Akershus, der vi som regel kan stille på befaring samme uke. Større oppdrag og faste avtaler tar vi i hele Sørøst-Norge, inkludert Innlandet, Østfold og Gjøvikregionen.'],
 ]
@@ -147,6 +149,10 @@ export default function Page() {
 <p><strong>Papirene tar vi før vi rigger.</strong> Dokumentert HMS på hvert oppdrag, og vi kjenner byggherrens påseplikt — dere slipper å etterspørre dokumentasjonen. Arbeidsvarsling, leie av gategrunn og øvrige søknader, blant annet mot Bymiljøetaten i Oslo, håndterer vi før arbeidet starter.</p>
 <p><strong>Praktisk på vaskedagen:</strong> beboerne varsles på forhånd, vinduer skal være lukket, og ingen trenger å være hjemme.</p>
 <ul class="chips"><li>Fasadevask</li><li>Vindusvask</li><li>Grafittifjerning</li><li>Takrennerens</li><li>Takvask</li><li>Murreparasjon</li><li>Fasademaling</li><li>Istappfjerning</li></ul>
+
+<h2 id="takvask">Takvask — ta taket i samme runde</h2>
+<p>Mose og alger trives enda bedre på taket enn på fasaden. Mosen holder på fukt, løfter takstein i frostperioder og forkorter takets levetid — et tak som ikke vedlikeholdes, må ofte legges om år før det ellers hadde vært nødvendig. Vi utfører <strong>takvask</strong> med samme metodevalg som på fasaden: skånsom mosefjerning og impregnering der taket er sårbart, høytrykk kun der taksteinen tåler det.</p>
+<p>Siden vi allerede står med rigg, lift og vann på stedet, er takvask sammen med fasadevasken som regel vesentlig rimeligere enn som egen jobb — rigg- og kjørekostnaden deles mellom tjenestene. Be om pris på begge deler i samme befaring.</p>
 
 <h2>Områder vi dekker</h2>
 <p>Kjerneområdet er <strong>Oslo og Akershus</strong> — der er vi ofte i nærheten allerede og kan som regel stille på befaring samme uke: ${KOMMUNER.slice(0, 10).join(', ')} og resten av Akershus. Større oppdrag og faste avtaler tar vi i hele Sørøst-Norge, inkludert Innlandet, Østfold, Gjøvikregionen og ned mot Sørlandet.</p>
