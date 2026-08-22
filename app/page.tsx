@@ -26,7 +26,7 @@ export default function Page() {
 :root{--ink:#0E1826;--ink2:#16233A;--navy:#1E3A63;--sky:#7FB2E5;--hiviz:#D8EC3C;
 --puss:#ECEDE9;--puss2:#DEE0DB;--paper:#fff;--stein:#8A9099;--steind:#59606B;
 --wrap:1160px;--nar:660px;--d:"Bricolage Grotesque",system-ui,sans-serif;--b:"Inter Tight",system-ui,sans-serif;--r:16px}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
+*{box-sizing:border-box}html{scroll-behavior:smooth}section[id]{scroll-margin-top:70px}
 body{margin:0;background:var(--puss);color:var(--ink);font-family:var(--b);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}a{color:inherit}p{margin:0 0 1em}
 h1,h2,h3{font-family:var(--d);font-weight:600;letter-spacing:-.025em;line-height:1.05;margin:0}
@@ -200,8 +200,9 @@ footer{background:var(--ink);color:#98A2B0;padding:64px 0 40px;font-size:14.5px}
 .vid{margin-top:52px}
 .vidb{position:relative;aspect-ratio:1/1;max-width:560px;margin:22px auto 0;border-radius:var(--r);overflow:hidden;background:var(--ink2);border:1px solid rgba(255,255,255,.15)}
 .vidb iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-@media(max-width:960px){section{padding:74px 0}.nv{display:none}.hb{display:inline-flex;margin-left:auto}.tel{display:none}.hd .btn{padding:9px 16px;font-size:13.5px}.hd{gap:12px}.cl1{display:none}.cs1{display:inline}
-.wg,.pg,.om,.omr,.fg,.hmsg{grid-template-columns:1fr;gap:26px}
+@media(max-width:960px){section{padding:74px 0}.nv{display:none}.hb{display:inline-flex;margin-left:auto}.tel{display:none}.hd .btn{padding:9px 14px;font-size:13px}.hd{gap:12px}
+.wg,.pg,.om,.omr,.fg,.hmsg,.vvg{grid-template-columns:1fr;gap:26px}
+#befaring{padding-top:38px}#befaring .wrap{display:flex;flex-direction:column-reverse}#befaring .sk{margin-top:0}#befaring .nar{margin-top:34px}
 .cat{grid-template-columns:1fr;gap:22px}.cm img{aspect-ratio:16/9}
 .bar{grid-template-columns:1fr;gap:34px}.stp{grid-template-columns:1fr}
 .st1{border-right:0;border-bottom:1px solid var(--puss2);padding:26px 0}.st1:not(:first-child){padding-left:0}.st1:last-child{border-bottom:0}
@@ -238,7 +239,7 @@ footer{background:var(--ink);color:#98A2B0;padding:64px 0 40px;font-size:14.5px}
 </nav>
 <button class="hb" id="hbBtn" aria-expanded="false" aria-controls="mm">Meny</button>
 <a class="tel" href="tel:+4792979177">929 79 177</a>
-<a class="btn bs1" href="#befaring"><span class="cl1">Gratis befaring</span><span class="cs1">Befaring</span></a></div></header>
+<a class="btn bs1" href="#befaring">Gratis befaring</a></div></header>
 <div class="mm" id="mm">
 <h5>Tjenester</h5>
 <a href="/fasadevask">Fasadevask</a>
@@ -299,7 +300,7 @@ footer{background:var(--ink);color:#98A2B0;padding:64px 0 40px;font-size:14.5px}
 <div class="nar rv"><p class="ey">Alt i ett selskap</p>
 <h2 class="h2">Én befaring. Ett tilbud. Én faktura.</h2>
 <p style="font-size:18.5px;color:var(--steind);margin-top:18px">De fleste bygg trenger flere ting samtidig. Når vi først er på plass, tar vi alt i samme runde — i stedet for at du skal hente inn tre leverandører og koordinere dem selv. Huk av det du tror bygget ditt trenger:</p></div>
-<div class="pg rv"><div class="pl"><label class="pk"><input type="checkbox" value="Fasadevask"><span>Fasadevask</span></label><label class="pk"><input type="checkbox" value="Vindusvask"><span>Vindusvask</span></label><label class="pk"><input type="checkbox" value="Grafittifjerning"><span>Grafittifjerning</span></label><label class="pk"><input type="checkbox" value="Takrennerens"><span>Takrennerens</span></label><label class="pk"><input type="checkbox" value="Takreparasjon"><span>Takreparasjon</span></label><label class="pk"><input type="checkbox" value="Murreparasjon"><span>Murreparasjon</span></label><label class="pk"><input type="checkbox" value="Beslag"><span>Beslag</span></label><label class="pk"><input type="checkbox" value="Maling"><span>Maling</span></label><label class="pk"><input type="checkbox" value="Snørydding"><span>Snørydding</span></label><label class="pk"><input type="checkbox" value="Istappfjerning"><span>Istappfjerning</span></label><label class="pk"><input type="checkbox" value="Daglig renhold"><span>Daglig renhold</span></label></div>
+<div class="pg rv"><div class="pl"><label class="pk"><input type="checkbox" value="Fasadevask"><span>Fasadevask</span></label><label class="pk"><input type="checkbox" value="Vindusvask"><span>Vindusvask</span></label><label class="pk"><input type="checkbox" value="Grafittifjerning"><span>Grafittifjerning</span></label><label class="pk"><input type="checkbox" value="Takrennerens"><span>Takrennerens</span></label><label class="pk"><input type="checkbox" value="Takvask"><span>Takvask</span></label><label class="pk"><input type="checkbox" value="Takreparasjon"><span>Takreparasjon</span></label><label class="pk"><input type="checkbox" value="Murreparasjon"><span>Murreparasjon</span></label><label class="pk"><input type="checkbox" value="Beslag"><span>Beslag</span></label><label class="pk"><input type="checkbox" value="Maling"><span>Maling</span></label><label class="pk"><input type="checkbox" value="Snørydding"><span>Snørydding</span></label><label class="pk"><input type="checkbox" value="Istappfjerning"><span>Istappfjerning</span></label><label class="pk"><input type="checkbox" value="Daglig renhold"><span>Daglig renhold</span></label></div>
 <div class="ty"><div class="tr"><span>Tjenester valgt</span><b id="tS">0</b></div>
 <div class="tr"><span>Leverandører ellers</span><b id="tL">0</b></div>
 <div class="tr ac"><span>Befaringer hos oss</span><b id="tB">0</b></div>
@@ -309,7 +310,7 @@ footer{background:var(--ink);color:#98A2B0;padding:64px 0 40px;font-size:14.5px}
 <section class="pa" id="tjenester"><div class="wrap">
 <div class="nar rv"><p class="ey">Tjenester</p><h2 class="h2">Fire områder. Én leverandør.</h2>
 <p style="font-size:18.5px;color:var(--steind);margin-top:18px">Hvert område får sin egen side med undertjenester, priseksempler og bilder fra faktiske jobber — slik at et søk på «lekkasje tak» eller «grafittifjerning Oslo» lander riktig med én gang.</p></div>
-<div class="cats rv"><article class="cat" id="fasadevask-rengjoring"><div class="cm"><img src="/img/c_fasade.webp" alt="Fasadevask og utvendig rengjøring" loading="lazy"></div><div class="cb"><p class="cn">01</p><h3 class="ct">Fasadevask og utvendig rengjøring</h3><p class="cl">Hele det utvendige, fra rekkverk til gesims. Softwash der overflaten er sårbar, høytrykk der den tåler det.</p><ul class="cs"><li>Fasadevask</li><li>Vindusvask</li><li>Grafittifjerning</li><li>Garasjevask</li><li>Softwash</li><li>Høytrykksvask</li><li>Algevask og mosevask</li><li>Utvendig rengjøring av næringsbygg</li></ul><a class="la" href="/fasadevask">Mer om fasadevask <span aria-hidden="true">→</span></a></div></article><article class="cat" id="handverk"><div class="cm"><img src="/img/c_handverk.webp" alt="Håndverk" loading="lazy"></div><div class="cb"><p class="cn">02</p><h3 class="ct">Håndverk</h3><p class="cl">Mur, betong, tak, beslag og snekker. Ser vi skadet puss eller rusten armering under befaringen, kan vi ta det selv — uten å hente inn noen andre.</p>
+<div class="cats rv"><article class="cat" id="fasadevask-rengjoring"><div class="cm"><img src="/img/c_fasade.webp" alt="Fasadevask og utvendig rengjøring" loading="lazy"></div><div class="cb"><p class="cn">01</p><h3 class="ct">Fasadevask og utvendig rengjøring</h3><p class="cl">Hele det utvendige, fra rekkverk til gesims. Softwash der overflaten er sårbar, høytrykk der den tåler det.</p><ul class="cs"><li>Fasadevask</li><li>Takvask</li><li>Vindusvask</li><li>Grafittifjerning</li><li>Garasjevask</li><li>Softwash</li><li>Høytrykksvask</li><li>Algevask og mosevask</li><li>Utvendig rengjøring av næringsbygg</li></ul><a class="la" href="/fasadevask">Mer om fasadevask <span aria-hidden="true">→</span></a></div></article><article class="cat" id="handverk"><div class="cm"><img src="/img/c_handverk.webp" alt="Håndverk" loading="lazy"></div><div class="cb"><p class="cn">02</p><h3 class="ct">Håndverk</h3><p class="cl">Mur, betong, tak, beslag og snekker. Ser vi skadet puss eller rusten armering under befaringen, kan vi ta det selv — uten å hente inn noen andre.</p>
 <p class="cl" style="margin-top:-6px">Tak- og metallarbeid dekker både blikkenslager- og kobberslagerfaget: beslag, pipebeslag, takrenner og nedløp, taktekking og fasadeelementer i stål, sink og aluminium — og de tynnere kobberarbeidene på eldre bygg, fra takdetaljer til tårnspir. Gammel metalltradisjon møter moderne byggteknikk, og på bygårder er det ofte nettopp dette arbeidet som avgjør om taket holder tett i tiår.</p><ul class="cs"><li>Murreparasjon og betongrehabilitering</li><li>Fasademaling</li><li>Taktekking og takreparasjon</li><li>Lekkasje i tak</li><li>Blikkenslagerarbeid</li><li>Kobberslagerarbeid</li><li>Beslag og pipebeslag</li><li>Snekkerarbeid</li><li>Levegg</li><li>Tilstandsrapport</li></ul>
 <div class="mest"><img src="/img/logo-mester.webp" alt="Mesterbrev" loading="lazy" width="86" height="68">
 <div><b>Mesterbedrift — mur, maling og blikkenslager</b><p>Håndverket vårt utføres under mesterbrev innen murer-, maler- og blikkenslagerfaget. For et styre betyr det dokumentert fagkompetanse på det arbeidet som faktisk avgjør om bygget holder tett.</p></div></div>
