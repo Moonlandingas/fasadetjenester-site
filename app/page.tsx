@@ -20,8 +20,6 @@ export default function Page() {
   return (<>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com"  crossOrigin="anonymous"/>
-    <link rel="stylesheet" href="https://embed.typeform.com/next/css/popup.css"/>
-    <link rel="stylesheet" href="https://embed.typeform.com/next/css/popup.css"/>
     <style dangerouslySetInnerHTML={{__html: `
 :root{--ink:#0E1826;--ink2:#16233A;--navy:#1E3A63;--sky:#7FB2E5;--hiviz:#D8EC3C;
 --puss:#ECEDE9;--puss2:#DEE0DB;--paper:#fff;--stein:#8A9099;--steind:#59606B;

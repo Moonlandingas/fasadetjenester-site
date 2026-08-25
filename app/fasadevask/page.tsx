@@ -82,7 +82,7 @@ export default function Page() {
 <nav class="anv"><a href="/">Forside</a><a href="/fasadevask">Fasadevask</a><a href="/fasadevask/pris">Pris</a><a href="/#tjenester">Tjenester</a><a href="/verdt-a-vite">Verdt å vite</a></nav>
 <a class="btn" href="#befaring">Gratis befaring</a></div></header>
 
-<section class="hero2"><div class="hbg2" style="background-image:url('/img/hero.webp')"></div>
+<section class="hero2"><div class="hbg2" style="background-image:url('/img/hero-video-poster.webp')"><video data-herovideo autoplay muted loop playsinline preload="auto" poster="/img/hero-video-poster.webp" src="/banner.mp4"></video></div>
 <div class="hin2">
 <p class="crumb"><a href="/">Forside</a> / Fasadevask</p>
 <p class="ey">Fasadevask · Gratis befaring — ofte samme uke</p>
@@ -171,5 +171,6 @@ ${FAQ.map(([q, a]) => '<details class="fq"><summary>' + q + '</summary><p>' + a 
 <footer><div>© 2026 Fasadetjenester AS · Org.nr. 934 907 035 · <a href="tel:${TLF}">${TLF_VIS}</a> · <a href="mailto:${EPOST}">${EPOST}</a> · Mikalsrud 7A, 2069 Jessheim</div></footer>` }}/>
     <Script src="https://embed.typeform.com/next/embed.js" strategy="afterInteractive"/>
     <Script src="/js/tf.js" strategy="afterInteractive"/>
+    <Script src="/js/hero-video.js" strategy="afterInteractive"/>
   </>)
 }

@@ -83,6 +83,7 @@ export const SKJEMA_CSS = `
 export const HERO_CSS = `
 .hero2{position:relative;background:var(--ink);color:#fff;overflow:hidden}
 .hero2 .hbg2{position:absolute;inset:0;background-size:cover;background-position:center 30%;opacity:.5}
+.hero2 .hbg2 video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .hero2::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(8,14,24,.94) 0%,rgba(8,14,24,.82) 45%,rgba(8,14,24,.55) 100%)}
 .hero2 .hin2{position:relative;z-index:2;max-width:1160px;margin:0 auto;padding:64px 24px 54px}
 .hero2 .crumb{color:rgba(255,255,255,.55);margin:0 0 26px}.hero2 .crumb a{color:rgba(255,255,255,.55)}

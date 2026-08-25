@@ -79,6 +79,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="nb">
       <body>
+        {/* Typeform-popupens stilark ma ligge her i layouten: knapper med
+            data-tf-open finnes pa flere sider, og uten popup.css apner
+            skjemaet som en usynlig, ustylet boks som samtidig laser
+            scrollingen — siden oppleves som frosset. */}
+        <link rel="stylesheet" href="https://embed.typeform.com/next/css/popup.css"/>
         <Script id="consent-init" src="/js/consent-init.js" strategy="beforeInteractive" />
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KP9PTS6D" height="0" width="0" style={{display:'none',visibility:'hidden'}}></iframe></noscript>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: orgLd }} />
