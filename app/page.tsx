@@ -217,6 +217,7 @@ footer{background:var(--ink);color:#98A2B0;padding:64px 0 40px;font-size:14.5px}
 <div class="sub"><div class="subin">
 <a href="/fasadevask">Fasadevask — metode og intervall</a>
 <a href="/fasadevask/pris">Hva koster fasadevask?</a>
+<a href="/avlop">Avløp og rørspyling</a>
 <a href="#fasadevask-rengjoring">Utvendig rengjøring</a>
 <a href="#handverk">Håndverk — mur, tak, maling</a>
 <a href="#vinter-sikring">Vinter og sikring</a>
@@ -242,6 +243,7 @@ footer{background:var(--ink);color:#98A2B0;padding:64px 0 40px;font-size:14.5px}
 <h5>Tjenester</h5>
 <a href="/fasadevask">Fasadevask</a>
 <a href="/fasadevask/pris">Hva koster fasadevask?</a>
+<a href="/avlop">Avløp og rørspyling</a>
 <a href="#fasadevask-rengjoring">Utvendig rengjøring</a>
 <a href="#handverk">Håndverk — mur, tak, maling</a>
 <a href="#vinter-sikring">Vinter og sikring</a>
@@ -298,7 +300,7 @@ footer{background:var(--ink);color:#98A2B0;padding:64px 0 40px;font-size:14.5px}
 <div class="nar rv"><p class="ey">Alt i ett selskap</p>
 <h2 class="h2">Én befaring. Ett tilbud. Én faktura.</h2>
 <p style="font-size:18.5px;color:var(--steind);margin-top:18px">De fleste bygg trenger flere ting samtidig. Når vi først er på plass, tar vi alt i samme runde — i stedet for at du skal hente inn tre leverandører og koordinere dem selv. Huk av det du tror bygget ditt trenger:</p></div>
-<div class="pg rv"><div class="pl"><label class="pk"><input type="checkbox" value="Fasadevask"><span>Fasadevask</span></label><label class="pk"><input type="checkbox" value="Vindusvask"><span>Vindusvask</span></label><label class="pk"><input type="checkbox" value="Grafittifjerning"><span>Grafittifjerning</span></label><label class="pk"><input type="checkbox" value="Takrennerens"><span>Takrennerens</span></label><label class="pk"><input type="checkbox" value="Takvask"><span>Takvask</span></label><label class="pk"><input type="checkbox" value="Takreparasjon"><span>Takreparasjon</span></label><label class="pk"><input type="checkbox" value="Murreparasjon"><span>Murreparasjon</span></label><label class="pk"><input type="checkbox" value="Beslag"><span>Beslag</span></label><label class="pk"><input type="checkbox" value="Maling"><span>Maling</span></label><label class="pk"><input type="checkbox" value="Snørydding"><span>Snørydding</span></label><label class="pk"><input type="checkbox" value="Istappfjerning"><span>Istappfjerning</span></label><label class="pk"><input type="checkbox" value="Daglig renhold"><span>Daglig renhold</span></label></div>
+<div class="pg rv"><div class="pl"><label class="pk"><input type="checkbox" value="Fasadevask"><span>Fasadevask</span></label><label class="pk"><input type="checkbox" value="Vindusvask"><span>Vindusvask</span></label><label class="pk"><input type="checkbox" value="Grafittifjerning"><span>Grafittifjerning</span></label><label class="pk"><input type="checkbox" value="Takrennerens"><span>Takrennerens</span></label><label class="pk"><input type="checkbox" value="Avløpsrens og rørspyling"><span>Avløpsrens</span></label><label class="pk"><input type="checkbox" value="Takvask"><span>Takvask</span></label><label class="pk"><input type="checkbox" value="Takreparasjon"><span>Takreparasjon</span></label><label class="pk"><input type="checkbox" value="Murreparasjon"><span>Murreparasjon</span></label><label class="pk"><input type="checkbox" value="Beslag"><span>Beslag</span></label><label class="pk"><input type="checkbox" value="Maling"><span>Maling</span></label><label class="pk"><input type="checkbox" value="Snørydding"><span>Snørydding</span></label><label class="pk"><input type="checkbox" value="Istappfjerning"><span>Istappfjerning</span></label><label class="pk"><input type="checkbox" value="Daglig renhold"><span>Daglig renhold</span></label></div>
 <div class="ty"><div class="tr"><span>Tjenester valgt</span><b id="tS">0</b></div>
 <div class="tr"><span>Leverandører ellers</span><b id="tL">0</b></div>
 <div class="tr ac"><span>Befaringer hos oss</span><b id="tB">0</b></div>
