@@ -1,5 +1,5 @@
 import Script from 'next/script'
-import { LIVE, TLF, TLF_VIS, TYPEFORM_URL, GRAFITTI_VIDEO } from '../lib/site'
+import { LIVE, TLF, TLF_VIS, TYPEFORM_URL, GRAFITTI_VIDEO, GRAFITTI_POSTER } from '../lib/site'
 import { SKJEMA_CSS } from '../lib/css'
 export const metadata = {
   title: "Fasadevask og utvendig vedlikehold | Fasadetjenester AS",
@@ -120,7 +120,7 @@ header.st .lg em{color:var(--navy)}header.st .bg1{border-color:var(--ink);color:
 .ct{font-size:clamp(27px,3vw,35px);margin:0 0 12px}.cl{max-width:52ch;color:var(--steind)}
 .cs{list-style:none;padding:0;margin:20px 0 22px;display:flex;flex-wrap:wrap;gap:7px}
 .cs li{font-size:13.5px;padding:6px 13px;background:var(--paper);border:1px solid var(--puss2);border-radius:100px;color:var(--steind)}
-.bar{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:48px}.ba{margin:0}
+.bar{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;margin-top:48px;max-width:960px}.ba{margin:0}
 .bs{position:relative;aspect-ratio:3/4;border-radius:var(--r);overflow:hidden;background:var(--ink2);cursor:ew-resize;touch-action:pan-y;border:1px solid rgba(255,255,255,.15)}
 .bi{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;background:var(--ink2)}
 .bat{position:absolute;inset:0;clip-path:inset(0 0 0 50%)}
@@ -197,7 +197,7 @@ footer{background:var(--ink);color:#98A2B0;padding:64px 0 40px;font-size:14.5px}
 @media(max-width:560px){.mest{flex-direction:column;align-items:flex-start;gap:14px}}
 .vid{margin-top:52px}
 .vidb{position:relative;aspect-ratio:1/1;max-width:560px;margin:22px auto 0;border-radius:var(--r);overflow:hidden;background:var(--ink2);border:1px solid rgba(255,255,255,.15)}
-.vidb iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vidb iframe,.vidb video{position:absolute;inset:0;width:100%;height:100%;border:0;object-fit:cover;background:#000}
 @media(max-width:960px){section{padding:74px 0}.nv{display:none}.hb{display:inline-flex;margin-left:auto}.tel{display:none}.hd .btn{padding:9px 14px;font-size:13px}.hd{gap:12px}
 .wg,.pg,.om,.omr,.fg,.hmsg,.vvg{grid-template-columns:1fr;gap:26px}
 #befaring{padding-top:38px}#befaring .wrap{display:flex;flex-direction:column-reverse}#befaring .sk{margin-top:0}#befaring .nar{margin-top:34px}
@@ -320,14 +320,13 @@ footer{background:var(--ink);color:#98A2B0;padding:64px 0 40px;font-size:14.5px}
 <div class="nar rv"><p class="ey">Før og etter</p><h2 class="h2">Dra i linja og se forskjellen.</h2>
 <p style="font-size:18.5px;color:rgba(228,233,239,.74);margin-top:18px">Bildene under er fra våre egne oppdrag. Ingen illustrasjonsfoto.</p></div>
 <div class="bar rv">
-<figure class="ba" data-ba><div class="bs"><img class="bi" src="/img/ba_graf_for.webp" alt="Tagging på pusset fasade"><div class="bat"><img class="bi" src="/img/ba_graf_etter.webp" alt="Samme fasade etter grafittifjerning"></div><span class="bt btf">Før</span><span class="bt bte">Etter</span><div class="bh" aria-hidden="true"><span></span></div><input class="br" type="range" min="0" max="100" value="50" step="0.1" aria-label="Dra for å avdekke etter-bildet: Grafittifjerning"></div><figcaption><strong>Grafittifjerning</strong> Sinsen. Tagging fjernet uten å skade pussen.</figcaption></figure>
-<figure class="ba" data-ba><div class="bs"><img class="bi" src="/img/ba_tak_for.webp" alt="Tak med mose og begroing"><div class="bat"><img class="bi" src="/img/ba_tak_etter.webp" alt="Tak etter rens"></div><span class="bt btf">Før</span><span class="bt bte">Etter</span><div class="bh" aria-hidden="true"><span></span></div><input class="br" type="range" min="0" max="100" value="50" step="0.1" aria-label="Dra for å avdekke etter-bildet: Takvask"></div><figcaption><strong>Takvask</strong> Mose og begroing fjernet fra taket.</figcaption></figure>
 <figure class="ba" data-ba><div class="bs"><img class="bi" src="/img/ba_fas_for.webp" alt="Fasade med algebelegg"><div class="bat"><img class="bi" src="/img/ba_fas_etter.webp" alt="Fasade etter vask"></div><span class="bt btf">Før</span><span class="bt bte">Etter</span><div class="bh" aria-hidden="true"><span></span></div><input class="br" type="range" min="0" max="100" value="50" step="0.1" aria-label="Dra for å avdekke etter-bildet: Fasadevask"></div><figcaption><strong>Fasadevask</strong> Alger og grønske vasket bort med softwash.</figcaption></figure>
+<figure class="ba" data-ba><div class="bs"><img class="bi" src="/img/ba_graf_for.webp" alt="Tagging på pusset fasade"><div class="bat"><img class="bi" src="/img/ba_graf_etter.webp" alt="Samme fasade etter grafittifjerning"></div><span class="bt btf">Før</span><span class="bt bte">Etter</span><div class="bh" aria-hidden="true"><span></span></div><input class="br" type="range" min="0" max="100" value="50" step="0.1" aria-label="Dra for å avdekke etter-bildet: Grafittifjerning"></div><figcaption><strong>Grafittifjerning</strong> Sinsen. Tagging fjernet uten å skade pussen.</figcaption></figure>
 </div>
 ${GRAFITTI_VIDEO ? `<div class="vid rv">
 <h3 style="font-size:clamp(22px,2.6vw,29px);margin:0">Grafittifjerning — se hvordan vi gjør det</h3>
 <p style="font-size:16.5px;color:rgba(228,233,239,.72);margin:12px 0 0;max-width:52ch">Tagging fjernes uten å skade pussen under. Metoden velges etter underlaget, akkurat som ved fasadevask.</p>
-<div class="vidb"><iframe src="${GRAFITTI_VIDEO}" title="Fasadetjenester — grafittifjerning" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
+<div class="vidb"><video controls playsinline preload="metadata" poster="${GRAFITTI_POSTER}" src="${GRAFITTI_VIDEO}" title="Fasadetjenester — grafittifjerning"></video></div>
 </div>` : ''}
 </div></section>
 

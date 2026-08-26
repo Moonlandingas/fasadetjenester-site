@@ -18,8 +18,11 @@ export const TYPEFORM_URL = 'https://416jbe00upv.typeform.com/to/' + TYPEFORM_ID
 // innsending. Ingen egen skjemamottaker aa vedlikeholde.
 
 
-// Grafittivideo (JWPlayer). Tom streng skjuler videoseksjonen.
-export const GRAFITTI_VIDEO = 'https://cdn.jwplayer.com/players/brXg3yG3-DqlJkzVm.html'
+// Grafittivideo — direkte mp4 fra JWPlayer-CDN-en (1:1, 49 sek). Tom streng
+// skjuler videoseksjonen. Native <video> i stedet for player-iframe: JWPlayer-
+// embedden skalerte seg feil inne i den kvadratiske boksen paa desktop.
+export const GRAFITTI_VIDEO = 'https://cdn.jwplayer.com/videos/brXg3yG3-1zG5yALB.mp4'
+export const GRAFITTI_POSTER = 'https://cdn.jwplayer.com/v2/media/brXg3yG3/poster.jpg?width=720'
 
 // Kommuner vi dekker — brukes i LocalBusiness.areaServed (eksplisitt liste
 // gir bedre lokal forståelse enn 'Østlandet').
