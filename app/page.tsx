@@ -75,6 +75,12 @@ header.st .lg em{color:var(--navy)}header.st .bg1{border-color:var(--ink);color:
 .nb b{font-family:var(--d);font-size:16.5px}.nb .np{color:rgba(255,255,255,.74)}
 .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--hiviz);margin-right:9px;vertical-align:1px}
 .nb a{color:var(--hiviz);text-decoration:none;font-weight:600;white-space:nowrap}
+.duo{padding:64px 0 28px}
+.duog{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.duoc{background:var(--paper);border:1px solid var(--puss2);border-radius:20px;padding:34px}
+.duoc h3{font-size:clamp(24px,2.6vw,30px);margin:0 0 12px}
+.duoc>p:not(.ey){color:var(--steind);margin:0 0 20px;font-size:16.5px}
+.duoa{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
 .strip{background:var(--navy);color:#CBD9EA;padding:18px 0;font-size:15.5px}
 .strip ul{display:flex;flex-wrap:wrap;gap:10px 34px;list-style:none;margin:0;padding:0;justify-content:center}
 .strip li{white-space:nowrap}
@@ -266,8 +272,8 @@ footer{background:var(--ink);color:#98A2B0;padding:64px 0 40px;font-size:14.5px}
 <img src="/img/hero.webp" alt="Fasadetjenester AS — banner på stillas i Oslo" id="heroFallback"></div>
 <div class="hin"><div class="wrap">
 <p class="ey" style="color:var(--hiviz)">Gratis befaring — hele året</p>
-<h1>Fasadevask.<br><span style="color:rgba(255,255,255,.82)">Og alt det andre bygget trenger.</span></h1>
-<p class="hsub">Vi vasker fasaden — og siden vi først er der, sjekker vi gjerne tak, takrenner og mur i samme runde. Helt uforpliktende: du får vite hva bygget trenger, og velger selv om noe mer skal gjøres. Og velger du mer, kommer alt på ett tilbud og én faktura.</p>
+<h1>Fasadevask og håndverk.<br><span style="color:rgba(255,255,255,.82)">Alt utvendig — én leverandør.</span></h1>
+<p class="hsub">Vi vasker fasader — og vi reparerer mur og tak, skifter beslag og maler. Egne fagfolk, samme befaring, ett tilbud. Helt uforpliktende: du får vite hva bygget trenger, og velger selv hva som skal gjøres.</p>
 <div class="hcta"><a class="btn bs1" href="#befaring">Bestill gratis befaring</a><a class="btn bg1" href="#arshjul">Se årshjulet</a></div>
 <div class="nb"><div><span class="dot"></span><b id="nowLabel">Aktuelt nå</b></div>
 <div class="np"><span id="nowSvc">Forvaltning og vedlikehold · Beslag · Bygningsvedlikehold</span> <span style="color:var(--hiviz)">· Fasadevask — hele året</span></div>
@@ -284,6 +290,15 @@ footer{background:var(--ink);color:#98A2B0;padding:64px 0 40px;font-size:14.5px}
 </div></section>
 </div></div>
 
+
+<section class="duo"><div class="wrap"><div class="duog rv">
+<div class="duoc"><p class="ey">Rengjøring</p><h3>Fasadevask</h3>
+<p>Skånsom softwash eller høytrykk etter hva fasaden tåler — på puss, tegl, plater og kledning. Vi tar vinduer, tak og takrenner i samme runde om du vil.</p>
+<div class="duoa"><a class="btn bs1" href="https://416jbe00upv.typeform.com/to/vKqv5RX5" data-tf-open data-tf-kilde="forside-fasadevask">Bestill gratis befaring</a><a class="la" href="/fasadevask">Mer om fasadevask <span aria-hidden="true">→</span></a></div></div>
+<div class="duoc"><p class="ey">Håndverk</p><h3>Mur, tak, beslag og maling</h3>
+<p>Egne fagfolk på mur- og betongreparasjon, tak og takrenner, blikkenslager- og kobberarbeid, snekker og maling. Skader vi finner på befaringen, utbedrer vi selv — ingen ekstra leverandør å koordinere.</p>
+<div class="duoa"><a class="btn bs1" href="https://416jbe00upv.typeform.com/to/vKqv5RX5" data-tf-open data-tf-kilde="forside-handverk">Be om pris på håndverk</a><a class="la" href="/#handverk">Se håndverkstjenestene <span aria-hidden="true">→</span></a></div></div>
+</div></div></section>
 
 <section class="dk" id="arshjul"><div class="wrap">
 <div class="nar rv"><p class="ey">Årshjulet</p>
